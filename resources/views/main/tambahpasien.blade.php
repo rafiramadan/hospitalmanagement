@@ -67,46 +67,50 @@
                             </div>
                             <div class="form-group">
                                 <label>Tipe Pendaftaran</label>
-                                {{-- <input type="text" name="tipependaftaran" class="form-control" required> --}}
                                 <select name="tipependaftaran" class="form-select" required>
                                     <option value="">Pilih Pendaftaran</option>
-                                    <option value="umum">Umum</option>
-                                    <option value="bpjs">BPJS</option>
-                                    <option value="asuransi">Asuransi</option>
+                                    <option value="Rawat Inap">Rawat Inap</option>
+                                    <option value="Poliklinik">Poliklinik</option>
+                                    <option value="IGD">IGD</option>
                                 </select>
                             </div>
                             <div class="form-group">
                                 <label>Kategori Pasien</label>
-                                <input type="text" name="kategoripasien" class="form-control" required>
+                                <select name="kategoripasien" class="form-select" required>
+                                    <option value="">Pilih Pendaftaran</option>
+                                    <option value="Umum">Umum</option>
+                                    <option value="BPJS">BPJS</option>
+                                    <option value="Asuransi">Asuransi</option>
+                                </select>
                             </div>
                             <div class="form-group">
                                 <label>No BPJS</label>
-                                <input type="text" name="nobpjs" class="form-control" required>
+                                <input type="text" name="nobpjs" class="form-control">
                             </div>
                             <div class="form-group">
                                 <label>No Surat</label>
-                                <input type="text" name="nosurat" class="form-control" required>
+                                <input type="text" name="nosurat" class="form-control">
                             </div>
                             <div class="form-group">
                                 <label>Faskes Rujukan</label>
-                                <input type="text" name="faskesrujuk" class="form-control" required>
+                                <input type="text" name="faskesrujuk" class="form-control">
                             </div>
                             <div class="form-group">
                                 <label>Jenis Asuransi</label>
-                                <input type="text" name="jenisasuransi" class="form-control" required>
+                                <input type="text" name="jenisasuransi" class="form-control">
                             </div>
                             <div class="form-group">
                                 <label>No Asuransi</label>
-                                <input type="text" name="noasuransi" class="form-control" required>
+                                <input type="text" name="noasuransi" class="form-control">
                             </div>
                             <div class="form-group">
                                 <label>Poli Tujuan</label>
                                 {{-- <input type="text" name="politujuan" class="form-control" required> --}}
-                                <select name="politujuan" class="form-select" required>
+                                <select name="politujuan" class="form-select">
                                     <option value="">Pilih Poli Tujuan</option>
-                                    <option value="poligigi">Poli Gigi</option>
-                                    <option value="poliumum">Poli Umum</option>
-                                    <option value="polisaraf">Poli Saraf</option>
+                                    <option value="Poli Gigi">Poli Gigi</option>
+                                    <option value="Poli Umum">Poli Umum</option>
+                                    <option value="Poli Saraf">Poli Saraf</option>
                                 </select>
                             </div>
                             <button type="submit" class="btn btn-success">Simpan Data</button>

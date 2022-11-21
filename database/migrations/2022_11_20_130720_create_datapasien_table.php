@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('nama');
             $table->string('ttl');
-            $table->integer('nik');
+            $table->string('nik');
             $table->string('tipependaftaran');
             $table->string('kategoripasien');
             $table->string('nobpjs');
