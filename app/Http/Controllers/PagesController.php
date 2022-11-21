@@ -39,6 +39,6 @@ class PagesController extends Controller
             'noasuransi' => $request->noasuransi,
             'politujuan' => $request->politujuan,
         ]);
-        return redirect('datapasien')->with('status', 'Data pasien berhasil ditambah');
+        return redirect('datapasien')->with('status', 'Data pasien berhasil ditambah!');
      }
 }

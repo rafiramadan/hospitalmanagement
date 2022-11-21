@@ -27,12 +27,6 @@
 <div class="content mt-3">
  
     <div class="animated fadeIn">
-        @if (session('statis'))
-            <div class="alert alert-success">
-                {{ session('status')}}
-            </div>
-        @endif
-
         <div class="card">
             <div class="pull-left">
                 <strong>
