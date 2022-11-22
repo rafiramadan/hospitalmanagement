@@ -80,7 +80,12 @@
                                 <td>{{ $item->noasuransi }} </td>
                                 <td>{{ $item->politujuan }} </td>
                                 <td class="text-center">
-                                    <a href="" class="btn btn-primary btn-sm"></a> <i class="fa fa-pencil" ></i>
+                                     <a href="{{ url('datapasien/editpasien/' .$item->id)}}" class="btn btn-primary btn-sm"> <i class="fa fa-pencil" ></i></a> 
+                                     <form action="{{ url('datapasien/' .$item->id)}}" method="post" class="d-inline">
+                                        @method('delete')
+                                        @csrf
+                                        <button class="btn btn-danger btn-sm"> <i class="fa fa-trash"></i> </button>
+                                     </form>
                                 </td>
                             </tr>
                         @endforeach
