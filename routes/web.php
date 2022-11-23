@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PagesController;
+use App\Http\Controllers\PasienController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,9 +26,9 @@ Route::get('home', function(){
 });
 
 
-Route::get('datapasien', [PagesController::class, 'datapasien']);
-Route::get('datapasien/tambahpasien', [PagesController::class, 'tambahpasien']);
-Route::post('datapasien', [PagesController::class, 'simpanpasien']);
-Route::get('datapasien/editpasien/{id}', [PagesController::class, 'editpasien']);
-Route::patch('datapasien/{id}', [PagesController::class, 'editpasienprocess']);
-Route::post('datapasien/{id}', [PageController::class, 'hapus']);
+Route::get('datapasien', [PasienController::class, 'datapasien']);
+Route::get('datapasien/tambahpasien', [PasienController::class, 'tambahpasien']);
+Route::post('datapasien', [PasienController::class, 'simpanpasien']);
+Route::get('datapasien/editpasien/{id}', [PasienController::class, 'editpasien']);
+Route::patch('datapasien/{id}', [PasienController::class, 'editpasienprocess']);
+Route::delete('datapasien/{id}', [PasienController::class, 'hapusdata']);
