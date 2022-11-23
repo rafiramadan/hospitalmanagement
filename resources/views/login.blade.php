@@ -28,7 +28,7 @@
 		<h3>IHDM</h3>
 	</div>
     <div class="login"> 
-<form action="cek_login.php" method="post" onSubmit="return validasi()">
+        <form action="cek_login.php" method="post" onSubmit="return validasi()">
 			<div>
 				<img src={{ asset('style/images/user.png') }}>
 				<label>Username:</label>
@@ -51,7 +51,7 @@
         <div class="overlay">
             
             <div class="overlay-panel overlay-right">
-                <h1>Welcome To</h1>
+                <h1>Selamat Datang di</h1>
                 <h2> Integrated Hospital Data Management </h2>
                 <p></p>
             </div>

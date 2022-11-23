@@ -1,0 +1,74 @@
+
+h5 {
+    font-size: 40px;
+} 
+
+/* Card Rawat Inap */
+.rawat-inap {
+    background-color: #155962;
+    border-radius: 20px;
+    color: white;
+    margin-bottom: 20px;
+    height: 150px;
+}
+
+.bed {
+    position: absolute;
+    display: flex;
+    width: 130px;
+    height: 134px;
+    margin-left: 830px;
+    margin-top: -90px;
+}
+.link-rawat {
+    position: flex;
+    color: white;
+    top: 20px;
+}
+/* Card Rawat Inap End */
+
+/* Card Poliklinik */
+.scope {
+    position: absolute;
+    display: flex;
+    width: 130px;
+    height: 134px;
+    margin-left: 350px;
+    margin-top: -90px;
+}
+
+.poliklinik {
+    background-color: #4FA074;
+    border-radius: 20px;
+    color: white;
+    height: 150px;
+}
+.link-poliklinik {
+    position: flex;
+    color: white;
+    top: 20px;
+}
+/* Card Poliklinik End */ 
+
+/* Card IGD */
+.igd-1 {
+    position: absolute;
+    display: flex;
+    width: 130px;
+    height: 134px;
+    margin-left: 350px;
+    margin-top: -90px;
+}
+
+.igd {
+    background-color: #B83737;
+    border-radius: 20px;
+    color: white;
+    height: 150px;
+}
+.link-igd {
+    position: flex;
+    color: white;
+    top: 20px;
+}
+/* Card IGD End */ 

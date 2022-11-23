@@ -6,9 +6,9 @@
 }
 
 body {
-    background: #257d83;
-    background: -webkit-linear-gradient(to right, #35edf3, #257d83);
-    background: linear-gradient(to right, #3561f3, #257d83);
+    background: #9F8772;
+    background: -webkit-linear-gradient(to right, #96765b, #a78161);
+    background: linear-gradient(to right, #926947, #a78161);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,13 +21,15 @@ body {
 h1 {
     padding-top: 40px;
     font-weight: bold;
-    font-size: 40px;
+    font-size: 20px;
     margin: 0;
+    color: black;
 }
 
 h2 {
     text-align: center;
     font-size: 25px;
+    color: black;
 }
 
 h3 {
@@ -63,8 +65,8 @@ a {
 button {
     border-radius: 20px;
     margin-top: 15px;
-    border: 1px solid  #30afb8;
-    background-color: #30afb8;
+    border: 1px solid  #9F8772;
+    background-color: #9F8772;
     color: #000000;
     font-size: 12px;
     font-weight: bold;
@@ -76,8 +78,8 @@ button {
 }
 
 button:hover {
-    background-color: #3f66e6;
-    border: 1px solid   #3f66e6;
+    background-color: #926947;
+    border: 1px solid   #926947;
 }
 
 button:active {
@@ -192,9 +194,7 @@ input {
 }
 
 .overlay {
-    background: #257d83;
-    background: -webkit-linear-gradient(to right, #35edf3, #257d83);
-    background: linear-gradient(to right, #3561f3, #257d83);
+    background-image: url('http://127.0.0.1:8000/style/images/bg1.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 0 0;
@@ -288,7 +288,7 @@ footer a {
 @media (max-width: 780px) {
     h3 {
         display: block;
-        color: #fff;
+        color: rgb(255, 255, 255);
         text-align: center;
         font-size: 25px;
         margin-top: -50px;
@@ -306,7 +306,7 @@ footer a {
     }
     
     .container {
-        background-color: rgba(31, 118, 177, 0.15);  
+        background-color: rgba(197, 141, 104, 0.87);  
         backdrop-filter: blur(10px);
         border-radius: 10px;
         box-shadow: 0 40px 60px rgba(0,0,0,0.25), 
@@ -387,8 +387,8 @@ footer a {
     button {
         border-radius: 20px;
         margin-top: 3px;
-        border: 1px solid  #30afb8;
-        background-color: #30afb8;
+        border: 1px solid  #9F8772;
+        background-color: #9F8772;
         color: #000000;
         font-family: 'Montserrat', sans-serif; 
         font-size: 10px;
@@ -402,8 +402,8 @@ footer a {
     }
 
     button:hover {
-        background-color: #3f66e6;
-        border: 1px solid   #3f66e6;
+        background-color: #926947;
+        border: 1px solid   #926947;
     }
 }
 
