@@ -18,9 +18,9 @@ Route::get('/', function () {
     return view('home');
 });
 
-// Route::get('home', function(){
-//     return view('home');
-// });
+Route::get('home', function(){
+     return view('home');
+});
 
 
 Route::get('datapasien', [PagesController::class, 'datapasien']);
@@ -28,4 +28,4 @@ Route::get('datapasien/tambahpasien', [PagesController::class, 'tambahpasien']);
 Route::post('datapasien', [PagesController::class, 'simpanpasien']);
 Route::get('datapasien/editpasien/{id}', [PagesController::class, 'editpasien']);
 Route::patch('datapasien/{id}', [PagesController::class, 'editpasienprocess']);
-Route::delete('datapasien/{id}', [PageController::class, 'hapuspasien']);
+Route::post('datapasien/{id}', [PageController::class, 'hapus']);

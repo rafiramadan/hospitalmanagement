@@ -45,7 +45,7 @@ class PagesController extends Controller
     public function editpasien($id)
     {
         $datapasien = DB::table('datapasien')->where('id', $id)->first();
-         return view('main.editpasien', compact('datapasien'));
+        return view('main.editpasien', compact('datapasien'));
     }
 
     public function editpasienprocess(Request $request, $id)
@@ -67,8 +67,16 @@ class PagesController extends Controller
         return redirect('datapasien')->with('status', 'Data pasien berhasil diupdate!');
     }
 
-    public function hapuspasien($id)
+    public function hapus(Request $request)
     {
-        return "delete";
+        $id = $request->id;
+        DB::table('datapasien')->delete($id);
+        return redirect('datapasien')->with('status', 'Data pasien berhasil dihapus!');
     }
 }
+
+// public function hapus_pasien(Request $request){
+//     $id = $request->id;
+//     DB::table('pasien')->delete($id);
+//     return redirect('/data_pasien')->with('hapus', 'Data pasien berhasil dihapus');
+// }
