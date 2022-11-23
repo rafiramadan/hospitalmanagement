@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PagesController;
+use App\Http\Controllers\PasienController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,13 +22,17 @@ Route::get('login', function(){
 });
 
 Route::get('home', function(){
+<<<<<<< HEAD
     return view('home');
+=======
+     return view('home');
+>>>>>>> f08de90acc575f92188b69587af79b36d8699649
 });
 
 
-Route::get('datapasien', [PagesController::class, 'datapasien']);
-Route::get('datapasien/tambahpasien', [PagesController::class, 'tambahpasien']);
-Route::post('datapasien', [PagesController::class, 'simpanpasien']);
-Route::get('datapasien/editpasien/{id}', [PagesController::class, 'editpasien']);
-Route::patch('datapasien/{id}', [PagesController::class, 'editpasienprocess']);
-Route::delete('datapasien/{id}', [PageController::class, 'hapuspasien']);
+Route::get('datapasien', [PasienController::class, 'datapasien']);
+Route::get('datapasien/tambahpasien', [PasienController::class, 'tambahpasien']);
+Route::post('datapasien', [PasienController::class, 'simpanpasien']);
+Route::get('datapasien/editpasien/{id}', [PasienController::class, 'editpasien']);
+Route::patch('datapasien/{id}', [PasienController::class, 'editpasienprocess']);
+Route::delete('datapasien/{id}', [PasienController::class, 'hapusdata']);

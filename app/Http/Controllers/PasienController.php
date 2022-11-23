@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB; //penggunaan Query Builder
 
-class PagesController extends Controller
+class PasienController extends Controller
 {
     public function home()
      {
@@ -45,7 +45,7 @@ class PagesController extends Controller
     public function editpasien($id)
     {
         $datapasien = DB::table('datapasien')->where('id', $id)->first();
-         return view('main.editpasien', compact('datapasien'));
+        return view('main.editpasien', compact('datapasien'));
     }
 
     public function editpasienprocess(Request $request, $id)
@@ -67,8 +67,10 @@ class PagesController extends Controller
         return redirect('datapasien')->with('status', 'Data pasien berhasil diupdate!');
     }
 
-    public function hapuspasien($id)
+    public function hapusdata($id)
     {
-        return "delete";
+        DB::table('datapasien')->where('id', $id)->delete();
+        return redirect('datapasien')->with('status', 'Data pasien berhasil dihapus');
     }
+
 }
