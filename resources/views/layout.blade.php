@@ -29,8 +29,8 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="">Hospital Management</a>
-                <a class="navbar-brand hidden" href="">M</a>
+                <a class="navbar-brand" href="">Hospital Management</a> <br> 
+                <a class="navbar-brand hidden" href=""></a>
             </div>
  
             <div id="main-menu" class="main-menu collapse navbar-collapse">
