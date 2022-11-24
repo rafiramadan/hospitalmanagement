@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PasienController;
+use App\Http\Controllers\DokterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +18,11 @@ use App\Http\Controllers\PasienController;
 Route::get('/', function () {
     return view('home');
 });
+
+Route::get('home', function () {
+    return view('home');
+});
+
 Route::get('login', function(){
     return view('login');
 });
@@ -30,4 +36,9 @@ Route::patch('datapasien/{id}', [PasienController::class, 'editpasienprocess']);
 Route::delete('datapasien/{id}', [PasienController::class, 'hapusdata']);
 
 // Dokter
-Route::get('datadokter', [PasienController::class, 'datapasien']);
+Route::get('datadokter', [DokterController::class, 'datadokter']);
+Route::get('datadokter/tambahdokter', [DokterController::class, 'tambahdokter']);
+Route::post('datadokter', [DokterController::class, 'simpandokter']);
+Route::get('datadokter/editdokter/{id}', [DokterController::class, 'editdokter']);
+Route::patch('datadokter/{id}', [DokterController::class, 'editdokterprocess']);
+Route::delete('datadokter/{id}', [DokterController::class, 'hapusdata']);

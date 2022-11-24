@@ -40,7 +40,7 @@
                     Data Dokter
                 </strong>
                 <div class="pull-right">
-                    <a href="{{ url('datapasien/tambahpasien')}} " class="btn btn-success btn-sm">
+                    <a href="{{ url('datadokter/tambahdokter')}} " class="btn btn-success btn-sm">
                         <i class="fa fa-plus"></i> Tambah Data
                     </a>
                 </div>
@@ -59,7 +59,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($datapasien as $item)
+                        @foreach ($datadokter as $item)
                             <tr>
                                 <td>{{ $loop->iteration }} </td>
                                 <td>{{ $item->nid }} </td>
@@ -68,8 +68,8 @@
                                 <td>{{ $item->notelp }} </td>
                                 <td>{{ $item->alamat }} </td>
                                 <td class="text-center">
-                                     <a href="{{ url('datapasien/editpasien/' .$item->id)}}" class="btn btn-primary btn-sm"> <i class="fa fa-pencil" ></i></a> 
-                                     <form action="{{ url('datapasien/' .$item->id)}}" method="POST" class="d-inline" onsubmit="return confirm('Yakin hapus data?')">
+                                     <a href="{{ url('datadokter/editdokter/' .$item->id)}}" class="btn btn-primary btn-sm"> <i class="fa fa-pencil" ></i></a> 
+                                     <form action="{{ url('datadokter/' .$item->id)}}" method="POST" class="d-inline" onsubmit="return confirm('Yakin hapus data?')">
                                         @method('delete')
                                         @csrf
                                         <button class="btn btn-danger btn-sm"> <i class="fa fa-trash"></i> </button>
