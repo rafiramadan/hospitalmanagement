@@ -21,18 +21,13 @@ Route::get('login', function(){
     return view('login');
 });
 
-Route::get('home', function(){
-<<<<<<< HEAD
-    return view('home');
-=======
-     return view('home');
->>>>>>> f08de90acc575f92188b69587af79b36d8699649
-});
-
-
+// Pasien
 Route::get('datapasien', [PasienController::class, 'datapasien']);
 Route::get('datapasien/tambahpasien', [PasienController::class, 'tambahpasien']);
 Route::post('datapasien', [PasienController::class, 'simpanpasien']);
 Route::get('datapasien/editpasien/{id}', [PasienController::class, 'editpasien']);
 Route::patch('datapasien/{id}', [PasienController::class, 'editpasienprocess']);
 Route::delete('datapasien/{id}', [PasienController::class, 'hapusdata']);
+
+// Dokter
+Route::get('datadokter', [PasienController::class, 'datapasien']);
