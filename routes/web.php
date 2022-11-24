@@ -22,11 +22,7 @@ Route::get('login', function(){
 });
 
 Route::get('home', function(){
-<<<<<<< HEAD
     return view('home');
-=======
-     return view('home');
->>>>>>> f08de90acc575f92188b69587af79b36d8699649
 });
 
 
