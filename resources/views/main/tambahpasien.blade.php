@@ -44,63 +44,64 @@
                         <form action="{{ url('datapasien')}} " method="post">
                             @csrf
                             <div class="form-group">
-                                <label>Nama</label>
-                                <input type="text" name="nama" class="form-control" required>
+                                <label>No Pasien</label>
+                                <input type="text" name="nopasien" class="form-control">
                             </div>
                             <div class="form-group">
-                                <label>Tempat Tanggal Lahir</label>
-                                <input type="text" name="ttl" class="form-control" required>
+                                <label>Nama</label>
+                                <input type="text" name="nama" class="form-control">
                             </div>
                             <div class="form-group">
                                 <label>NIK</label>
-                                <input type="text" name="nik" class="form-control" required>
+                                <input type="text" name="nik" class="form-control">
                             </div>
                             <div class="form-group">
-                                <label>Tipe Pendaftaran</label>
-                                <select name="tipependaftaran" class="form-select" required>
-                                    <option value="">Pilih Pendaftaran</option>
-                                    <option value="Rawat Inap">Rawat Inap</option>
-                                    <option value="Poliklinik">Poliklinik</option>
-                                    <option value="IGD">IGD</option>
-                                </select>
+                                <label>Tempat Lahir</label>
+                                <input type="text" name="tempatlahir" class="form-control">
                             </div>
                             <div class="form-group">
-                                <label>Kategori Pasien</label>
-                                <select name="kategoripasien" class="form-select" required>
-                                    <option value="">Pilih Pendaftaran</option>
-                                    <option value="Umum">Umum</option>
+                                <label>Tanggal Lahir</label>
+                                <input type="text" name="tgllahir" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Umur</label>
+                                <input type="text" name="umur" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Kategori</label>
+                                <input type="text" name="kategori" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Jenis Kelamin</label>
+                                <select name="jeniskelamin" class="form-select">
+                                    <option value="">Pilih Jenis Kelamin</option>
+                                    <option value="L">L</option>
+                                    <option value="P">P</option>
+                            </div>
+                            <br><br><br>
+                            <div class="form-group">
+                                <label>Alamat</label>
+                                <input type="text" name="alamat" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>No Telp</label>
+                                <input type="text" name="notelp" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Golongan Darah</label>
+                                <input type="text" name="goldar" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Pekerjaan</label>
+                                <input type="text" name="pekerjaan" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Jenis Bayar</label>
+                                <select name="jenisbayar" class="form-select">
+                                    <option value="">Pilih Jenis Bayar</option>
                                     <option value="BPJS">BPJS</option>
+                                    <option value="Umum">Umum</option>
                                     <option value="Asuransi">Asuransi</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label>No BPJS</label>
-                                <input type="text" name="nobpjs" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label>No Surat</label>
-                                <input type="text" name="nosurat" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label>Faskes Rujukan</label>
-                                <input type="text" name="faskesrujuk" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label>Jenis Asuransi</label>
-                                <input type="text" name="jenisasuransi" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label>No Asuransi</label>
-                                <input type="text" name="noasuransi" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label>Poli Tujuan</label>
-                                {{-- <input type="text" name="politujuan" class="form-control" required> --}}
-                                <select name="politujuan" class="form-select">
-                                    <option value="">Pilih Poli Tujuan</option>
-                                    <option value="Poli Gigi">Poli Gigi</option>
-                                    <option value="Poli Umum">Poli Umum</option>
-                                    <option value="Poli Saraf">Poli Saraf</option>
                                 </select>
                             </div>
                             <button type="submit" class="btn btn-success">Simpan Data</button>

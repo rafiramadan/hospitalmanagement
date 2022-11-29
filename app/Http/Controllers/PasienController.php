@@ -27,17 +27,19 @@ class PasienController extends Controller
      public function simpanpasien(Request $request)
      {
         DB::table('datapasien')->insert([
+            'nopasien' => $request->nopasien,
             'nama' => $request->nama,
-            'ttl' => $request->ttl,
             'nik' => $request->nik,
-            'tipependaftaran' => $request->tipependaftaran,
-            'kategoripasien' => $request->kategoripasien,
-            'nobpjs' => $request->nobpjs,
-            'nosurat' => $request->nosurat,
-            'faskesrujuk' => $request->faskesrujuk,
-            'jenisasuransi' => $request->jenisasuransi,
-            'noasuransi' => $request->noasuransi,
-            'politujuan' => $request->politujuan,
+            'tempatlahir' => $request->tempatlahir,
+            'tgllahir' => $request->tgllahir,
+            'umur' => $request->umur,
+            'kategori' => $request->kategori,
+            'jeniskelamin' => $request->jeniskelamin,
+            'alamat' => $request->alamat,
+            'notelp' => $request->notelp,
+            'goldar' => $request->goldar,
+            'pekerjaan' => $request->pekerjaan,
+            'jenisbayar' => $request->jenisbayar,
         ]);
         return redirect('datapasien')->with('status', 'Data pasien berhasil ditambah!');
      }
@@ -52,17 +54,19 @@ class PasienController extends Controller
     {
         DB::table('datapasien')->where('id', $id)
             ->update([
+                'nopasien' => $request->nopasien,
                 'nama' => $request->nama,
-                'ttl' => $request->ttl,
                 'nik' => $request->nik,
-                'tipependaftaran' => $request->tipependaftaran,
-                'kategoripasien' => $request->kategoripasien,
-                'nobpjs' => $request->nobpjs,
-                'nosurat' => $request->nosurat,
-                'faskesrujuk' => $request->faskesrujuk,
-                'jenisasuransi' => $request->jenisasuransi,
-                'noasuransi' => $request->noasuransi,
-                'politujuan' => $request->politujuan,
+                'tempatlahir' => $request->tempatlahir,
+                'tgllahir' => $request->tgllahir,
+                'umur' => $request->umur,
+                'kategori' => $request->kategori,
+                'jeniskelamin' => $request->jeniskelamin,
+                'alamat' => $request->alamat,
+                'notelp' => $request->notelp,
+                'goldar' => $request->goldar,
+                'pekerjaan' => $request->pekerjaan,
+                'jenisbayar' => $request->jenisbayar,
             ]);
         return redirect('datapasien')->with('status', 'Data pasien berhasil diupdate!');
     }

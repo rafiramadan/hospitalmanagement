@@ -15,17 +15,19 @@ return new class extends Migration
     {
         Schema::create('datapasien', function (Blueprint $table) {
             $table->id();
+            $table->integer('nopasien');
             $table->string('nama');
-            $table->string('ttl');
             $table->string('nik');
-            $table->string('tipependaftaran');
-            $table->string('kategoripasien');
-            $table->string('nobpjs');
-            $table->string('nosurat');
-            $table->string('faskesrujuk');
-            $table->string('jenisasuransi');
-            $table->string('noasuransi');
-            $table->string('politujuan');
+            $table->string('tempatlahir');
+            $table->string('tgllahir');
+            $table->integer('umur');
+            $table->string('kategori');
+            $table->string('jeniskelamin');
+            $table->string('alamat');
+            $table->string('notelp');
+            $table->char('goldar');
+            $table->string('pekerjaan');
+            $table->string('jenisbayar');
         });
     }
 

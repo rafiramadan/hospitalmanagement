@@ -30,7 +30,7 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="">Hospital Management</a> <br> 
+                <a class="navbar-brand" href="">Manajemen IGD</a> <br> 
                 <a class="navbar-brand hidden" href=""></a>
             </div>
  
@@ -43,7 +43,10 @@
                         <a href="{{ url('datapasien') }}"> <i class="menu-icon fa fa-puzzle-piece"></i>Data Pasien </a>
                     </li>
                     <li>
-                        <a href="{{ url('rekammedis') }}"> <i class="menu-icon fa fa-puzzle-piece"></i>Data Rekam Medis </a>
+                        <a href="{{ url('datatriase') }}"> <i class="menu-icon fa fa-puzzle-piece"></i>Data Triase </a>
+                    </li>
+                    <li>
+                        <a href="{{ url('dataperawat') }}"> <i class="menu-icon fa fa-puzzle-piece"></i>Data Perawat </a>
                     </li>
                     <li>
                         <a href="{{ url('datadokter') }}"> <i class="menu-icon fa fa-puzzle-piece"></i>Data Dokter </a>
@@ -75,7 +78,6 @@
                             <img class="user-avatar rounded-circle" src="{{ asset('style/images/admin.jpg') }}">
                         </a>
                         <div class="user-menu dropdown-menu">
-                            <a class="nav-link" href="#"><i class="fa fa -cog"></i>Settings</a>
                             <a class="nav-link" href="#"><i class="fa fa-power -off"></i>Logout</a>
                         </div>
                     </div>

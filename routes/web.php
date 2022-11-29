@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PasienController;
 use App\Http\Controllers\DokterController;
+use App\Http\Controllers\PerawatController;
+use App\Http\Controllers\TriaseController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,15 +29,7 @@ Route::get('login', function(){
     return view('login');
 });
 
-<<<<<<< HEAD
-Route::get('home', function(){
-    return view('home');
-});
-
-
-=======
 // Pasien
->>>>>>> 6a7dccfe8a7e70772a24b5774756b4f7983983e6
 Route::get('datapasien', [PasienController::class, 'datapasien']);
 Route::get('datapasien/tambahpasien', [PasienController::class, 'tambahpasien']);
 Route::post('datapasien', [PasienController::class, 'simpanpasien']);
@@ -50,3 +44,14 @@ Route::post('datadokter', [DokterController::class, 'simpandokter']);
 Route::get('datadokter/editdokter/{id}', [DokterController::class, 'editdokter']);
 Route::patch('datadokter/{id}', [DokterController::class, 'editdokterprocess']);
 Route::delete('datadokter/{id}', [DokterController::class, 'hapusdata']);
+
+// Perawat
+Route::get('dataperawat', [PerawatController::class, 'dataperawat']);
+Route::get('dataperawat/tambahperawat', [PerawatController::class, 'tambahperawat']);
+Route::post('dataperawat', [PerawatController::class, 'simpanperawat']);
+Route::get('dataperawat/editperawat/{id}', [PerawatController::class, 'editperawat']);
+Route::patch('dataperawat/{id}', [PerawatController::class, 'editperawatprocess']);
+Route::delete('dataperawat/{id}', [PerawatController::class, 'hapusdata']);
+
+// Triase
+Route::resource('datatriase', 'TriaseController');
