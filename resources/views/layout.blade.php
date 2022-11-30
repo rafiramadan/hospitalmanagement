@@ -51,6 +51,9 @@
                     <li>
                         <a href="{{ url('datadokter') }}"> <i class="menu-icon fa fa-puzzle-piece"></i>Data Dokter </a>
                     </li>
+                    <li>
+                        <a href="{{ url('dataobat') }}"> <i class="menu-icon fa fa-puzzle-piece"></i>Data Obat </a>
+                    </li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </nav>

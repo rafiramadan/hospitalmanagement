@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title', 'Dashboard')
+@section('title', 'Data Perawat')
 
 @section('breadcrumbs')
 <div class="breadcrumbs">
@@ -15,7 +15,6 @@
         <div class="page-header float-right">
             <div class="page-title">
                 <ol class="breadcrumb text-right">
-                    <li class="active"><i class="fa fa-dashboard"></i></li>
                 </ol>
             </div>
         </div>

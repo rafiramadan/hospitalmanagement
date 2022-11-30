@@ -54,4 +54,4 @@ Route::patch('dataperawat/{id}', [PerawatController::class, 'editperawatprocess'
 Route::delete('dataperawat/{id}', [PerawatController::class, 'hapusdata']);
 
 // Triase
-Route::resource('datatriase', 'TriaseController');
+Route::resource('datatriase', TriaseController::class);
