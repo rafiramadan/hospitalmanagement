@@ -24,7 +24,7 @@
 
 @section('content')
 <div class="content mt-3">
- 
+
     <div class="animated fadeIn">
 
         @if (session('status'))
@@ -35,9 +35,13 @@
 
         <div class="card">
             <div class="pull-left">
-                <strong>
-                    Data Pasien
-                </strong>
+                <div class=" offset-md-4">
+                    <strong>
+                        <h2>
+                            Data Pasien
+                        </h2>
+                    </strong>
+                </div>
                 <div class="pull-right">
                     <a href="{{ url('datapasien/tambahpasien')}} " class="btn btn-success btn-sm">
                         <i class="fa fa-plus"></i> Tambah Data
@@ -83,7 +87,7 @@
                                 <td>{{ $item->pekerjaan }} </td>
                                 <td>{{ $item->jenisbayar }} </td>
                                 <td class="text-center">
-                                     <a href="{{ url('datapasien/editpasien/' .$item->id)}}" class="btn btn-primary btn-sm"> <i class="fa fa-pencil" ></i></a> 
+                                     <a href="{{ url('datapasien/editpasien/' .$item->id)}}" class="btn btn-primary btn-sm"> <i class="fa fa-pencil" ></i></a>
                                      <form action="{{ url('datapasien/' .$item->id)}}" method="POST" class="d-inline" onsubmit="return confirm('Yakin hapus data?')">
                                         @method('delete')
                                         @csrf
