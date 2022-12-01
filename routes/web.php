@@ -5,6 +5,7 @@ use App\Http\Controllers\PasienController;
 use App\Http\Controllers\DokterController;
 use App\Http\Controllers\PerawatController;
 use App\Http\Controllers\TriaseController;
+use App\Http\Controllers\ObatController;
 
 /*
 |--------------------------------------------------------------------------
@@ -52,6 +53,14 @@ Route::post('dataperawat', [PerawatController::class, 'simpanperawat']);
 Route::get('dataperawat/editperawat/{id}', [PerawatController::class, 'editperawat']);
 Route::patch('dataperawat/{id}', [PerawatController::class, 'editperawatprocess']);
 Route::delete('dataperawat/{id}', [PerawatController::class, 'hapusdata']);
+
+// Obat
+Route::get('dataobat', [ObatController::class, 'dataobat']);
+Route::get('dataobat/tambahobat', [ObatController::class, 'tambahobat']);
+Route::post('dataobat', [ObatController::class, 'simpanobat']);
+Route::get('dataobat/editobat/{id}', [ObatController::class, 'editobat']);
+Route::patch('dataobat/{id}', [ObatController::class, 'editobatprocess']);
+Route::delete('dataobat/{id}', [ObatController::class, 'hapusdata']);
 
 // Triase
 Route::resource('datatriase', TriaseController::class);
