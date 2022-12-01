@@ -6,6 +6,12 @@ use App\Http\Controllers\DokterController;
 use App\Http\Controllers\PerawatController;
 use App\Http\Controllers\TriaseController;
 use App\Http\Controllers\ObatController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\PengantarlabController;
+use App\Http\Controllers\RawatinapController;
+use App\Http\Controllers\RujukController;
+use App\Http\Controllers\ObatpasienController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,6 +35,14 @@ Route::get('home', function () {
 Route::get('login', function(){
     return view('login');
 });
+
+//login
+Route::get('/', [LoginController::class, 'login'])->name('login');
+Route::post('actionlogin', [LoginController::class, 'actionlogin'])->name('actionlogin');
+
+//REGISTER
+Route::get('register', [RegisterController::class, 'register'])->name('register');
+Route::post('register/action', [RegisterController::class, 'actionregister'])->name('actionregister');
 
 // Pasien
 Route::get('datapasien', [PasienController::class, 'datapasien']);
@@ -62,5 +76,9 @@ Route::get('dataobat/editobat/{id}', [ObatController::class, 'editobat']);
 Route::patch('dataobat/{id}', [ObatController::class, 'editobatprocess']);
 Route::delete('dataobat/{id}', [ObatController::class, 'hapusdata']);
 
-// Triase
+// New Routing Method
 Route::resource('datatriase', TriaseController::class);
+Route::resource('pengantarlab', PengantarlabController::class);
+Route::resource('rawatinap', RawatinapController::class);
+Route::resource('rujuk', RujukController::class);
+Route::resource('obatpasien', ObatpasienController::class);

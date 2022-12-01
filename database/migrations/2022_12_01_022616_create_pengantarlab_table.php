@@ -31,6 +31,7 @@ return new class extends Migration
             $table->string('labtorch');
             $table->string('labhepatitis');
             $table->foreignId('datadokter_id')->constrained('datadokter')->onDelete('restrict')->onUpdate('restrict');
+            $table->String('catatan');
             $table->timestamps();
         });
     }
