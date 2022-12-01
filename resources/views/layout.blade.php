@@ -54,6 +54,18 @@
                     <li>
                         <a href="{{ url('dataobat') }}"> <i class="menu-icon fa fa-medkit"></i>Data Obat </a>
                     </li>
+                    <li>
+                        <a href="{{ url('pengantarlab') }}"> <i class="menu-icon fa fa-puzzle-piece"></i>Pengantar Lab </a>
+                    </li>
+                    <li>
+                        <a href="{{ url('rawatinap') }}"> <i class="menu-icon fa fa-puzzle-piece"></i>Rawat Inap </a>
+                    </li>
+                    <li>
+                        <a href="{{ url('rujuk') }}"> <i class="menu-icon fa fa-puzzle-piece"></i>Rujuk RS lain </a>
+                    </li>
+                    <li>
+                        <a href="{{ url('obatpasien') }}"> <i class="menu-icon fa fa-puzzle-piece"></i>Obat Pasien </a>
+                    </li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </nav>

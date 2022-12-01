@@ -5,8 +5,13 @@ use App\Http\Controllers\PasienController;
 use App\Http\Controllers\DokterController;
 use App\Http\Controllers\PerawatController;
 use App\Http\Controllers\TriaseController;
+use App\Http\Controllers\ObatController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\PengantarlabController;
+use App\Http\Controllers\RawatinapController;
+use App\Http\Controllers\RujukController;
+use App\Http\Controllers\ObatpasienController;
 
 /*
 |--------------------------------------------------------------------------
@@ -63,5 +68,17 @@ Route::get('dataperawat/editperawat/{id}', [PerawatController::class, 'editperaw
 Route::patch('dataperawat/{id}', [PerawatController::class, 'editperawatprocess']);
 Route::delete('dataperawat/{id}', [PerawatController::class, 'hapusdata']);
 
-// Triase
+// Obat
+Route::get('dataobat', [ObatController::class, 'dataobat']);
+Route::get('dataobat/tambahobat', [ObatController::class, 'tambahobat']);
+Route::post('dataobat', [ObatController::class, 'simpanobat']);
+Route::get('dataobat/editobat/{id}', [ObatController::class, 'editobat']);
+Route::patch('dataobat/{id}', [ObatController::class, 'editobatprocess']);
+Route::delete('dataobat/{id}', [ObatController::class, 'hapusdata']);
+
+// New Routing Method
 Route::resource('datatriase', TriaseController::class);
+Route::resource('pengantarlab', PengantarlabController::class);
+Route::resource('rawatinap', RawatinapController::class);
+Route::resource('rujuk', RujukController::class);
+Route::resource('obatpasien', ObatpasienController::class);
