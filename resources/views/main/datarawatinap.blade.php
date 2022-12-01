@@ -39,7 +39,7 @@
                     Data Rawat Inap
                 </strong>
                 <div class="pull-right">
-                    <a href="{{ url('dataobat/tambahobat')}} " class="btn btn-success btn-sm">
+                    <a href="{{ url('rawatinap/create')}} " class="btn btn-success btn-sm">
                         <i class="fa fa-plus"></i> Tambah Data
                     </a>
                 </div>

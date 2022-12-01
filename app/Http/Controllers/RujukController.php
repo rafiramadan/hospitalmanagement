@@ -26,7 +26,8 @@ class RujukController extends Controller
      */
     public function create()
     {
-        //
+        $rujuk = Rujuk::all();
+        return view('main.tambahrujuk', compact('rujuk'));
     }
 
     /**
@@ -37,7 +38,14 @@ class RujukController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $rujuk = new rujuk;
+        $rujuk->datapasien_id = $request->datapasien_id;
+        $rujuk->diagnosa = $request->diagnosa;
+        $rujuk->rstujuan = $request->rstujuan;
+        $rujuk->polirujukan = $request->polirujukan;
+        $rujuk->save();
+
+        return redirect('rujuk')->with('status', 'Data Rujuk RS lain berhasil ditambahkan!');
     }
 
     /**

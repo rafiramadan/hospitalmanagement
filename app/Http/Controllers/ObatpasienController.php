@@ -25,7 +25,8 @@ class ObatpasienController extends Controller
      */
     public function create()
     {
-        //
+        $obatpasien = Obatpasien::all();
+        return view('main.tambahobatpasien', compact('obatpasien'));
     }
 
     /**
@@ -36,7 +37,14 @@ class ObatpasienController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $obatpasien = new obatpasien;
+        $obatpasien->datapasien_id = $request->datapasien_id;
+        $obatpasien->dataobat_id = $request->dataobat_id;
+        $obatpasien->diagnosa = $request->diagnosa;
+        $obatpasien->jumlah = $request->jumlah;
+        $obatpasien->save();
+
+        return redirect('obatpasien')->with('status', 'Data obat pasien berhasil ditambahkan!');
     }
 
     /**

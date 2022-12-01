@@ -41,8 +41,7 @@
             <div class="card-body table-responsive">
                 <div class="row">
                     <div class="col-md-4 offset-md-4">
-                        <form action="{{ url('datatriase/' .$datatriase->id)}} " method="post">
-                            @method('patch')
+                        <form action="{{ url('datatriase')}} " method="post">
                             @csrf
                             <div class="form-group">
                                 <label>Pasien</label>
@@ -55,7 +54,7 @@
                             </div>
                             <div class="form-group">
                                 <label>Cara Datang</label>
-                                <input type="text" name="caradatang" class="form-control" value="{{ $datatriase->caradatang }}">
+                                <input type="text" name="caradatang" class="form-control">
                             </div>
                             <div class="form-group">
                                 <label>jeniskasus</label>

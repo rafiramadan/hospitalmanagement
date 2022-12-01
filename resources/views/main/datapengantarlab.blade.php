@@ -39,7 +39,7 @@
                     Data Pengantar Lab
                 </strong>
                 <div class="pull-right">
-                    <a href="{{ url('datadokter/tambahdokter')}} " class="btn btn-success btn-sm">
+                    <a href="{{ url('pengantarlab/create')}} " class="btn btn-success btn-sm">
                         <i class="fa fa-plus"></i> Tambah Data
                     </a>
                 </div>
@@ -91,8 +91,9 @@
                                 <td>{{ $item->dokter->nama }} </td>
                                 <td>{{ $item->catatan }} </td>
                                 <td class="text-center">
-                                     <a href="{{ url('datadokter/editdokter/' .$item->id)}}" class="btn btn-primary btn-sm"> <i class="fa fa-pencil" ></i></a> 
-                                     <form action="{{ url('datadokter/' .$item->id)}}" method="POST" class="d-inline" onsubmit="return confirm('Yakin hapus data?')">
+                                    <a href="{{ url('pengantarlab/' .$item->id)}}" class="btn btn-primary btn-sm"> <i class="fa fa-eye" ></i></a> 
+                                     <a href="{{ url('pengantarlab/edit/' .$item->id)}}" class="btn btn-primary btn-sm"> <i class="fa fa-pencil" ></i></a> 
+                                     <form action="{{ url('pengantarlab/' .$item->id)}}" method="POST" class="d-inline" onsubmit="return confirm('Yakin hapus data?')">
                                         @method('delete')
                                         @csrf
                                         <button class="btn btn-danger btn-sm"> <i class="fa fa-trash"></i> </button>

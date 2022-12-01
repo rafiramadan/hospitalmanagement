@@ -27,7 +27,8 @@ class RawatinapController extends Controller
      */
     public function create()
     {
-        //
+        $rawatinap = Rawatinap::all();
+        return view('main.tambahrawatinap', compact('rawatinap'));
     }
 
     /**
@@ -38,7 +39,18 @@ class RawatinapController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $rawatinap = new Rawatinap;
+        $rawatinap->datapasien_id = $request->datapasien_id;
+        $rawatinap->poliigd = $request->poliigd;
+        $rawatinap->ruang = $request->ruang;
+        $rawatinap->kelas = $request->kelas;
+        $rawatinap->diagnosa = $request->diagnosa;
+        $rawatinap->dischargeplanning = $request->dischargeplanning;
+        $rawatinap->datadokter_id = $request->datadokter_id;
+        $rawatinap->tglmasuk = $request->tglmasuk;
+        $rawatinap->save();
+
+        return redirect('rawatinap')->with('status', 'Data Pengantar Lab berhasil ditambahkan!');
     }
 
     /**

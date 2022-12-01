@@ -46,15 +46,6 @@
                         <a href="{{ url('datatriase') }}"> <i class="menu-icon fa fa-puzzle-piece"></i>Data Triase </a>
                     </li>
                     <li>
-                        <a href="{{ url('dataperawat') }}"> <i class="menu-icon fa fa-puzzle-piece"></i>Data Perawat </a>
-                    </li>
-                    <li>
-                        <a href="{{ url('datadokter') }}"> <i class="menu-icon fa fa-user-md"></i>Data Dokter </a>
-                    </li>
-                    <li>
-                        <a href="{{ url('dataobat') }}"> <i class="menu-icon fa fa-medkit"></i>Data Obat </a>
-                    </li>
-                    <li>
                         <a href="{{ url('pengantarlab') }}"> <i class="menu-icon fa fa-puzzle-piece"></i>Pengantar Lab </a>
                     </li>
                     <li>
@@ -66,6 +57,16 @@
                     <li>
                         <a href="{{ url('obatpasien') }}"> <i class="menu-icon fa fa-puzzle-piece"></i>Obat Pasien </a>
                     </li>
+                    <li>
+                        <a href="{{ url('dataperawat') }}"> <i class="menu-icon fa fa-puzzle-piece"></i>Data Perawat </a>
+                    </li>
+                    <li>
+                        <a href="{{ url('datadokter') }}"> <i class="menu-icon fa fa-user-md"></i>Data Dokter </a>
+                    </li>
+                    <li>
+                        <a href="{{ url('dataobat') }}"> <i class="menu-icon fa fa-medkit"></i>Data Obat </a>
+                    </li>
+                    
                 </ul>
             </div><!-- /.navbar-collapse -->
         </nav>
