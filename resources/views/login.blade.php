@@ -6,11 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Login - Sigada </title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="{{ asset('style/assets/css/login.css') }}"> -->
 </head>
+
 <body>
     <div class="container"><br>
         <div class="col-md-4 col-md-offset-4">
-            <h2 class="text-center"><b>SIgada</b><br>Sistem Informasi Gawat Darurat</h3>
+            <h2 class="text-center"><b>SIGADA</b><br>Sistem Informasi Gawat Darurat</h3>
             <hr>
             @if(session('error'))
             <div class="alert alert-danger">

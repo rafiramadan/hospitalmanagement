@@ -44,7 +44,7 @@
                 </div>
                 <div class="pull-right">
                     <a href="{{ url('datapasien/tambahpasien')}} " class="btn btn-success btn-sm">
-                        <i class="fa fa-plus"></i> Tambah Data
+                        <i class="fa fa-plus-circle"></i> Tambah Data
                     </a>
                 </div>
             </div>
@@ -87,11 +87,15 @@
                                 <td>{{ $item->pekerjaan }} </td>
                                 <td>{{ $item->jenisbayar }} </td>
                                 <td class="text-center">
+<<<<<<< HEAD
                                      <a href="{{ url('datapasien/editpasien/' .$item->id)}}" class="btn btn-primary btn-sm"> <i class="fa fa-pencil" ></i></a>
+=======
+                                     <a href="{{ url('datapasien/editpasien/' .$item->id)}}" class="btn btn-primary btn-sm"> <i class="fa fa-pencil" ></i> Edit</a> 
+>>>>>>> f34e814bcf17dacc50e4bbd3caa439d025431fdb
                                      <form action="{{ url('datapasien/' .$item->id)}}" method="POST" class="d-inline" onsubmit="return confirm('Yakin hapus data?')">
                                         @method('delete')
                                         @csrf
-                                        <button class="btn btn-danger btn-sm"> <i class="fa fa-trash"></i> </button>
+                                        <button class="btn btn-danger btn-sm"> <i class="fa fa-trash"></i> Hapus</button>
                                      </form>
                                 </td>
                             </tr>

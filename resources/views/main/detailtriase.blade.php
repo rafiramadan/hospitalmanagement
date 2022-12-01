@@ -49,7 +49,7 @@
             </div>
             <div class="card-body table-responsive">
                 <div class="col-md-8 offset-md-2">
-                    <table>
+                    <table class="table table-bordered table-striped table-hover">
                         <tbody>
                             @foreach ($datatriase as $item)
                             <tr>
@@ -58,11 +58,91 @@
                             </tr>
                             <tr>
                                 <th>Cara Datang</th>
-                                <td></td>
+                                <td>{{ $item->caradatang }} </td>
                             </tr>
                             <tr>
                                 <th>Jenis Kasus</th>
-                                <td></td>
+                                <td>{{ $item->jeniskasus }} </td>
+                            </tr>
+                            <tr>
+                                <th>Kategori</th>
+                                <td>{{ $item->kategori }} </td>
+                            </tr>
+                            <tr>
+                                <th>Kesadaran</th>
+                                <td>{{ $item->kesadaran }} </td>
+                            </tr>
+                            <tr>
+                                <th>Respon Time</th>
+                                <td>{{ $item->respontime }} </td>
+                            </tr>
+                            <tr>
+                                <th>Ruang</th>
+                                <td>{{ $item->ruang }} </td>
+                            </tr>
+                            <tr>
+                                <th>Urgensi</th>
+                                <td>{{ $item->urgensi }} </td>
+                            </tr>
+                            <tr>
+                                <th>Jenis Pelayanan</th>
+                                <td>{{ $item->jenispelayanan }} </td>
+                            </tr>
+                            <tr>
+                                <th>Alasan Datang</th>
+                                <td>{{ $item->alasandatang }} </td>
+                            </tr>
+                            <tr>
+                                <th>Cara Masuk</th>
+                                <td>{{ $item->caramasuk }} </td>
+                            </tr>
+                            <tr>
+                                <th>Keadaan Pra RS</th>
+                                <td>{{ $item->keadaanprars }} </td>
+                            </tr>
+                            <tr>
+                                <th>Tindakan Pra RS</th>
+                                <td>{{ $item->tindakprars }} </td>
+                            </tr>
+                            <tr>
+                                <th>Keluhan</th>
+                                <td>{{ $item->keluhan }} </td>
+                            </tr>
+                            <tr>
+                                <th>Anamnesa</th>
+                                <td>{{ $item->anamnesa }} </td>
+                            </tr>
+                            <tr>
+                                <th>Riwayat Penyakit</th>
+                                <td>{{ $item->riwayatpenyakit }} </td>
+                            </tr>
+                            <tr>
+                                <th>Status Psikolog</th>
+                                <td>{{ $item->statuspsikolog }} </td>
+                            </tr>
+                            <tr>
+                                <th>Riwayat Alergi</th>
+                                <td>{{ $item->riwayatalergi }} </td>
+                            </tr>
+                            <tr>
+                                <th>Pengkajian Airway</th>
+                                <td>{{ $item->pengkajianairway }} </td>
+                            </tr>
+                            <tr>
+                                <th>Pengkajian Breathing</th>
+                                <td>{{ $item->pengkajianbreathing }} </td>
+                            </tr>
+                            <tr>
+                                <th>Pengkajian Circulation</th>
+                                <td>{{ $item->pengkajiancirculation }} </td>
+                            </tr>
+                            <tr>
+                                <th>Tanggal Datang</th>
+                                <td>{{ $item->tgldatang }} </td>
+                            </tr>
+                            <tr>
+                                <th>Perawat</th>
+                                <td>{{ $item->perawat->nama }} </td>
                             </tr>
                             @endforeach
                         </tbody>

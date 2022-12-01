@@ -40,7 +40,7 @@
                         <a href="{{ url('home') }}"> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
                     </li>
                     <li>
-                        <a href="{{ url('datapasien') }}"> <i class="menu-icon fa fa-puzzle-piece"></i>Data Pasien </a>
+                        <a href="{{ url('datapasien') }}"> <i class="menu-icon fa fa-address-book-o"></i>Data Pasien </a>
                     </li>
                     <li>
                         <a href="{{ url('datatriase') }}"> <i class="menu-icon fa fa-puzzle-piece"></i>Data Triase </a>
@@ -49,10 +49,10 @@
                         <a href="{{ url('dataperawat') }}"> <i class="menu-icon fa fa-puzzle-piece"></i>Data Perawat </a>
                     </li>
                     <li>
-                        <a href="{{ url('datadokter') }}"> <i class="menu-icon fa fa-puzzle-piece"></i>Data Dokter </a>
+                        <a href="{{ url('datadokter') }}"> <i class="menu-icon fa fa-user-md"></i>Data Dokter </a>
                     </li>
                     <li>
-                        <a href="{{ url('dataobat') }}"> <i class="menu-icon fa fa-puzzle-piece"></i>Data Obat </a>
+                        <a href="{{ url('dataobat') }}"> <i class="menu-icon fa fa-medkit"></i>Data Obat </a>
                     </li>
                     <li>
                         <a href="{{ url('pengantarlab') }}"> <i class="menu-icon fa fa-puzzle-piece"></i>Pengantar Lab </a>
