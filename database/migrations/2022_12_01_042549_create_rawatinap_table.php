@@ -15,13 +15,13 @@ return new class extends Migration
     {
         Schema::create('rawatinap', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('datapasien_id')->constrained('datapasien')->onDelete('restrict')->onUpdate('restrict');
+            $table->foreignId('datapasien_id')->constrained('datapasien')->onDelete('cascade')->onUpdate('cascade');
             $table->string('poliigd');
             $table->string('ruang');
             $table->string('kelas');
             $table->string('diagnosa');
             $table->string('dischargeplanning');
-            $table->foreignId('datadokter_id')->constrained('datadokter')->onDelete('restrict')->onUpdate('restrict');
+            $table->foreignId('datadokter_id')->constrained('datadokter')->onDelete('cascade')->onUpdate('cascade');
             $table->string('tglmasuk');
             $table->timestamps();
         });

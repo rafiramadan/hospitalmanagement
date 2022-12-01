@@ -39,34 +39,36 @@ class TriaseController extends Controller
      */
     public function store(Request $request)
     {
-        return $request;
-        // $datatriase = new Triase;
-        // $datatriase->datapasien_id = $request->datapasien_id;
-        // $datatriase->caradatang = $request->caradatang;
-        // $datatriase->jeniskasus = $request->jeniskasus;
-        // $datatriase->kategori = $request->kategori;
-        // $datatriase->kesadaran = $request->kesadaran;
-        // $datatriase->respontime = $request->respontime;
-        // $datatriase->ruang = $request->ruang;
-        // $datatriase->urgensi = $request->urgensi;
-        // $datatriase->jenispelayanan = $request->jenispelayanan;
-        // $datatriase->alasandatang = $request->alasandatang;
-        // $datatriase->caramasuk = $request->caramasuk;
-        // $datatriase->keadaanprars = $request->keadaanprars;
-        // $datatriase->tindakprars = $request->tindakprars;
-        // $datatriase->keluhan = $request->keluhan;
-        // $datatriase->anamnesa = $request->anamnesa;
-        // $datatriase->riwayatpenyakit = $request->riwayatpenyakit;
-        // $datatriase->statuspsikolog = $request->statuspsikolog;
-        // $datatriase->riwayatalergi = $request->riwayatalergi;
-        // $datatriase->pengkajianairway = $request->pengkajianairway;
-        // $datatriase->pengkajianbreathing = $request->pengkajianbreathing;
-        // $datatriase->pengkajiancirculation = $request->pengkajiancirculation;
-        // $datatriase->tgldatang = $request->tgldatang;
-        // $datatriase->dataperawat_id = $request->dataperawat_id;
-        // $datatriase->save();
+        // $datatriase::create($request->all());
+        
+        // return redirect('datatriase')->with('status', 'Data Triase berhasil ditambah!');
+        $datatriase = new Triase;
+        $datatriase->datapasien_id = $request->datapasien_id;
+        $datatriase->caradatang = $request->caradatang;
+        $datatriase->jeniskasus = $request->jeniskasus;
+        $datatriase->kategori = $request->kategori;
+        $datatriase->kesadaran = $request->kesadaran;
+        $datatriase->respontime = $request->respontime;
+        $datatriase->ruang = $request->ruang;
+        $datatriase->urgensi = $request->urgensi;
+        $datatriase->jenispelayanan = $request->jenispelayanan;
+        $datatriase->alasandatang = $request->alasandatang;
+        $datatriase->caramasuk = $request->caramasuk;
+        $datatriase->keadaanprars = $request->keadaanprars;
+        $datatriase->tindakprars = $request->tindakprars;
+        $datatriase->keluhan = $request->keluhan;
+        $datatriase->anamnesa = $request->anamnesa;
+        $datatriase->riwayatpenyakit = $request->riwayatpenyakit;
+        $datatriase->statuspsikolog = $request->statuspsikolog;
+        $datatriase->riwayatalergi = $request->riwayatalergi;
+        $datatriase->pengkajianairway = $request->pengkajianairway;
+        $datatriase->pengkajianbreathing = $request->pengkajianbreathing;
+        $datatriase->pengkajiancirculation = $request->pengkajiancirculation;
+        $datatriase->tgldatang = $request->tgldatang;
+        $datatriase->dataperawat_id = $request->dataperawat_id;
+        $datatriase->save();
 
-        // return redirect('datatriase')->with('status', 'Triase berhasil ditambahkan!');
+        return redirect('datatriase')->with('status', 'Data Triase berhasil ditambahkan!');
     }
 
     /**
@@ -91,7 +93,8 @@ class TriaseController extends Controller
      */
     public function edit(Triase $triase)
     {
-        //
+        $datatriase = Triase::all();
+        return view('main.edittriase', compact('datatriase'));
     }
 
     /**
@@ -114,6 +117,7 @@ class TriaseController extends Controller
      */
     public function destroy(Triase $triase)
     {
-        //
+        $triase->delete();
+        return redirect('datatriase')->with('status', 'Data tidak bisa dihapus! Hapus master data pada Menu "Data Pasien"');
     }
 }

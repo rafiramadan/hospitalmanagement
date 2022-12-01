@@ -104,7 +104,7 @@
                                 <td>{{ $item->perawat->nama }} </td>
                                 <td class="text-center">
                                      <a href="{{ url('datatriase/' .$item->id)}}" class="btn btn-warning btn-sm"> <i class="fa fa-eye" ></i></a> 
-                                     <a href="{{ url('datatriase/' .$item->id)}}" class="btn btn-primary btn-sm"> <i class="fa fa-pencil" ></i></a> 
+                                     <a href="{{ url('datatriase/' .$item->id.'/edit')}}" class="btn btn-primary btn-sm"> <i class="fa fa-pencil" ></i></a> 
                                      <form action="{{ url('datatriase/' .$item->id)}}" method="POST" class="d-inline" onsubmit="return confirm('Yakin hapus data?')">
                                         @method('delete')
                                         @csrf

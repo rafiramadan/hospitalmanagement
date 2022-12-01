@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('pengantarlab', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('datapasien_id')->constrained('datapasien')->onDelete('restrict')->onUpdate('restrict');
+            $table->foreignId('datapasien_id')->constrained('datapasien')->onDelete('cascade')->onUpdate('cascade');
             $table->string('diagnosaklinik');
             $table->string('labhematologi');
             $table->string('laburine');
@@ -30,7 +30,7 @@ return new class extends Migration
             $table->string('labmunoserologi');
             $table->string('labtorch');
             $table->string('labhepatitis');
-            $table->foreignId('datadokter_id')->constrained('datadokter')->onDelete('restrict')->onUpdate('restrict');
+            $table->foreignId('datadokter_id')->constrained('datadokter')->onDelete('cascade')->onUpdate('cascade');
             $table->String('catatan');
             $table->timestamps();
         });

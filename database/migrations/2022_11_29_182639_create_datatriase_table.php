@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('datatriase', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('datapasien_id')->constrained('datapasien')->onDelete('restrict')->onUpdate('restrict');
+            $table->foreignId('datapasien_id')->constrained('datapasien')->onDelete('cascade')->onUpdate('cascade');
             $table->string('caradatang');
             $table->string('jeniskasus');
             $table->string('kategori');
@@ -37,7 +37,7 @@ return new class extends Migration
             $table->string('pengkajianbreathing');
             $table->string('pengkajiancirculation');
             $table->string('tgldatang');
-            $table->foreignId('dataperawat_id')->constrained('dataperawat')->onDelete('restrict')->onUpdate('restrict');
+            $table->foreignId('dataperawat_id')->constrained('dataperawat')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }

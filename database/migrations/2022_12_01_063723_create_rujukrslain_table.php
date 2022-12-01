@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('rujukrslain', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('datapasien_id')->constrained('datapasien')->onDelete('restrict')->onUpdate('restrict');
+            $table->foreignId('datapasien_id')->constrained('datapasien')->onDelete('cascade')->onUpdate('cascade');
             $table->string('diagnosa');
             $table->string('rstujuan');
             $table->string('polirujukan');

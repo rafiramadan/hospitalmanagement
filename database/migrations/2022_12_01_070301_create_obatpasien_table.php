@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('obatpasien', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('datapasien_id')->constrained('datapasien')->onDelete('restrict')->onUpdate('restrict');
-            $table->foreignId('dataobat_id')->constrained('dataobat')->onDelete('restrict')->onUpdate('restrict');
+            $table->foreignId('datapasien_id')->constrained('datapasien')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreignId('dataobat_id')->constrained('dataobat')->onDelete('cascade')->onUpdate('cascade');
             $table->string('diagnosa');
             $table->integer('jumlah');
             $table->timestamps();
