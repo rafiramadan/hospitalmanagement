@@ -25,10 +25,10 @@
 
 @section('content')
 <div class="content mt-3">
- 
+
     <div class="animated fadeIn">
         <div class="card">
-            <div class="pull-left">
+            <div class="card-header">
                 <strong>
                     Tambah Data Perawat
                 </strong>
@@ -50,13 +50,12 @@
                             <div class="form-group">
                                 <label>Nama</label>
                                 <input type="text" name="nama" class="form-control" required>
-                            <button type="submit" class="btn btn-success">Simpan Data</button>
+                                <button type="submit" class="btn btn-success">Simpan Data</button>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
 </div>
 @endsection

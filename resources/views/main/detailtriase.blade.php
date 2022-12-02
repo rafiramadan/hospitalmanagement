@@ -37,7 +37,7 @@
         @endif
 
         <div class="card">
-            <div class="pull-left">
+            <div class="card-header">
                 <strong>
                     Detail Triase
                 </strong>
@@ -53,7 +53,7 @@
                         <tbody>
                             @foreach ($datatriase as $item)
                             <tr>
-                                <th>Pasien</th>
+                                <th style="width:30%">Pasien</th>
                                 <td>{{ $item->pasien->nama }}</td>
                             </tr>
                             <tr>
