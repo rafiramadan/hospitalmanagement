@@ -24,30 +24,30 @@
 
 @section('content')
 <div class="content mt-3">
-    <div class="animated fadeIn">
-        <div class="rawat-inap">
+   <div class="animated fadeIn">
+    
+        <div class="pasien">
             <div class="card-body">
-                <h5 class="card-title">Rawat Inap</h5>
-                <a href="#popup-r" class="link-rawat">Data Pasien Rawat Inap</a>
-                <img src={{ asset('style/images/hospital-bed.png') }} class="bed">
+                <h5 class="card-title">Pasien</h5>
+                <a href="{{('datapasien')}}" class="link-pasien">Data Pasien IGD</a>
+                <img src="{{ asset('style/images/stethoscope.png') }}" class="bed">
             </div>
         </div>
-
         <div class="row">
             <div class="col-sm-6">
-                <div class="poliklinik">
+                <div class="rawat-inap">
                     <div class="card-body">
-                        <h5 class="card-title">Poliklinik</h5>
-                        <a href="#popup-p" class="link-poliklinik">Pendaftaran Pasien Poliklinik</a>
-                        <img src={{ asset('style/images/stethoscope.png') }} class="scope">
+                        <h5 class="card-title">Rawat Inap</h5>
+                        <a href="{{('rawatinap')}}" class="link-rawat">Data Rawat Inap</a>
+                        <img src="{{ asset('style/images/hospital-bed.png') }}" class="scope">
                     </div>
                 </div>
             </div>
             <div class="col-sm-6">
-                <div class="igd">
+                <div class="triase">
                     <div class="card-body">
-                        <h5 class="card-title">IGD</h5>
-                        <a href="#popup-i" class="link-igd">Pendaftaran IGD</a>
+                        <h5 class="card-title">Triase</h5>
+                        <a href="{{('datatriase')}}" class="link-triase">Data Triase</a>
                         <img src={{ asset('style/images/igd.png') }} class="igd-1">
                     </div>
                 </div>
@@ -56,31 +56,28 @@
     </div>
 
     <!-- Pop-up P-Rawat Inap -->
-    <div id="popup-r" class="overlay">
+    <!-- <div id="popup-r" class="overlay">
         <div class="popup">
             <h2>Pendaftaran Rawat Inap</h2>
-            <a class="close" href="#">&times;</a>
+            <a class="close" href="#">&times;</a> -->
 
             <!-- Contoh 1 menggunakan form dan button -->
-            <form method="post" action="#">
+            <!-- <form method="post" action="#">
                 <button type="submit" class="btn mr-2">Umum</button>
-            </form>
+            </form> -->
             <!-- end contoh 1 -->
             <!-- Contoh 1 menggunakan form dan button -->
-            <form method="post" action="https://kodekreasi.com">
+            <!-- <form method="post" action="https://kodekreasi.com">
                 <button type="submit" class="btn mr-3">BPJS</button>
-            </form>
+            </form> -->
             <!-- end contoh 1 -->
             <!-- Contoh 1 menggunakan form dan button -->
-            <form method="post" action="https://kodekreasi.com">
+            <!-- <form method="post" action="https://kodekreasi.com">
                 <button type="submit" class="btn mr-4">Non BPJS</button>
-            </form>
+            </form> -->
             <!-- end contoh 1 -->
-
-
-
-        </div>
-    </div>
+        <!-- </div>
+    </div> -->
     <!-- Pop-up P-Rawat Inap End-->
 
     <!-- Pop-up P-Poliklinik-->

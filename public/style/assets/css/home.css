@@ -2,9 +2,9 @@ h5 {
     font-size: 40px;
 }
 
-/* Card Rawat Inap */
-.rawat-inap {
-    background-color: #155962;
+/* Card Pasien */
+.pasien {
+    background-color: #4FA074;
     border-radius: 20px;
     color: white;
     margin-bottom: 20px;
@@ -16,19 +16,19 @@ h5 {
     display: flex;
     width: 130px;
     height: 134px;
-    margin-left: 830px;
+    margin-left: 850px;
     margin-top: -90px;
 }
 
-.link-rawat {
+.link-pasien {
     position: flex;
     color: white;
     top: 20px;
 }
 
-/* Card Rawat Inap End */
+/* Card Pasien End */
 
-/* Card Poliklinik */
+/* Card Rawat Inap */
 .scope {
     position: absolute;
     display: flex;
@@ -38,22 +38,21 @@ h5 {
     margin-top: -90px;
 }
 
-.poliklinik {
-    background-color: #4FA074;
+.rawat-inap {
+    background-color:#155962 ;
     border-radius: 20px;
     color: white;
     height: 150px;
 }
 
-.link-poliklinik {
+.link-rawat {
     position: flex;
     color: white;
     top: 20px;
 }
+/* Card Rawat Inap End */
 
-/* Card Poliklinik End */
-
-/* Card IGD */
+/* Card Triase */
 .igd-1 {
     position: absolute;
     display: flex;
@@ -63,23 +62,22 @@ h5 {
     margin-top: -90px;
 }
 
-.igd {
+.triase {
     background-color: #B83737;
     border-radius: 20px;
     color: white;
     height: 150px;
 }
 
-.link-igd {
+.link-triase {
     position: flex;
     color: white;
     top: 20px;
 }
-
-/* Card IGD End */
+/* Card Triase End */
 
 /* Pop-up Pendaftaran Rawat Inap */
-.overlay {
+/* .overlay {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -148,7 +146,7 @@ h5 {
     position: absolute;
     margin-left: 250px;
     margin-top: -100px;
-  }
+  } */
    
   /* css button */
   .btn{
