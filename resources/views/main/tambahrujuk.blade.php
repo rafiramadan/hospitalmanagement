@@ -46,8 +46,8 @@
                                 <label>Pasien</label>
                                 <select name="datapasien_id" class="form-control">          
                                     <option value="">Pilih</option>
-                                    @foreach ($rujuk as $item)
-                                        <option value="{{ $item->id }}">{{ $item->pasien->nama }}</option>
+                                    @foreach ($datapasien as $item)
+                                        <option value="{{ $item->id }}">{{ $item->nama }}</option>
                                     @endforeach
                                 </select>
                             </div>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Pasien;
 use App\Models\Rujuk;
 use Illuminate\Http\Request;
 
@@ -26,8 +27,9 @@ class RujukController extends Controller
      */
     public function create()
     {
+        $datapasien = Pasien::all();
         $rujuk = Rujuk::all();
-        return view('main.tambahrujuk', compact('rujuk'));
+        return view('main.tambahrujuk', compact('rujuk', 'datapasien'));
     }
 
     /**

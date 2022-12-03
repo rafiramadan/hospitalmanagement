@@ -47,8 +47,8 @@
                                 <label>Pasien</label>
                                 <select name="datapasien_id" class="form-control">          
                                     <option value="">Pilih</option>
-                                    @foreach ($datatriase as $item)
-                                        <option value="{{ $item->id }}">{{ $item->pasien->nama }}</option>
+                                    @foreach ($datapasien as $item)
+                                        <option value="{{ $item->id }}">{{ $item->nama }}</option>
                                     @endforeach
                                 </select>
                             </div>
@@ -57,15 +57,15 @@
                                 <input type="text" name="caradatang" class="form-control">
                             </div>
                             <div class="form-group">
-                                <label>jeniskasus</label>
+                                <label>Jeniskasus</label>
                                 <input type="text" name="jeniskasus" class="form-control">
                             </div>
                             <div class="form-group">
-                                <label>kategori</label>
+                                <label>Kategori</label>
                                 <input type="text" name="kategori" class="form-control">
                             </div>
                             <div class="form-group">
-                                <label>kesadaran</label>
+                                <label>Kesadaran</label>
                                 <input type="text" name="kesadaran" class="form-control">
                             </div>
                             <div class="form-group">
@@ -82,7 +82,7 @@
                             </div>
                             <div class="form-group">
                                 <label>Jenis Pelayanan</label>
-                                <input type="text" name="alamat" class="form-control">
+                                <input type="text" name="jenispelayanan" class="form-control">
                             </div>
                             <div class="form-group">
                                 <label>Alasan Datang</label>
@@ -140,8 +140,8 @@
                                 <label>Perawat</label>
                                 <select name="dataperawat_id" class="form-control">          
                                     <option value="">Pilih</option>
-                                    @foreach ($datatriase as $item)
-                                        <option value="{{ $item->id }}">{{ $item->perawat->nama }}</option>
+                                    @foreach ($dataperawat as $item)
+                                        <option value="{{ $item->id }}">{{ $item->nama }}</option>
                                     @endforeach
                                 </select>
                             </div>

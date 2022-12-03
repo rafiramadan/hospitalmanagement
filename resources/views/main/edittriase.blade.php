@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title', 'Triase')
+@section('title', 'Data Triase')
 
 @section('breadcrumbs')
 <div class="breadcrumbs">
@@ -41,28 +41,29 @@
             <div class="card-body table-responsive">
                 <div class="row">
                     <div class="col-md-4 offset-md-4">
-                        <form action="{{ url('datatriase')}} " method="post">
+                        <form action="{{ url('datatriase/')}} " method="post">
+                            @method('patch')
                             @csrf
                             <div class="form-group">
                                 <label>Pasien</label>
                                 <select name="datapasien_id" class="form-control">          
                                     <option value="">Pilih</option>
-                                    @foreach ($datatriase as $item)
-                                        <option value="{{ $item->id }}">{{ $item->pasien->nama }}</option>
+                                    @foreach ($datapasien as $item)
+                                        <option value="{{ $item->id }}">{{ $item->nama }}</option>
                                     @endforeach
                                 </select>
                             </div>
                             <div class="form-group">
                                 <label>Cara Datang</label>
-                                <input type="text" name="caradatang" class="form-control">
+                                <input type="text" name="caradatang" class="form-control" value="{{ $datatriase }}" required>
                             </div>
                             <div class="form-group">
                                 <label>jeniskasus</label>
-                                <input type="text" name="jeniskasus" class="form-control">
+                                <input type="text" name="jeniskasus" class="form-control" value="{{ $datatriase }}" required>
                             </div>
                             <div class="form-group">
                                 <label>kategori</label>
-                                <input type="text" name="kategori" class="form-control">
+                                <input type="text" name="kategori" class="form-control" value="{{ $datatriase }}" required>
                             </div>
                             <div class="form-group">
                                 <label>kesadaran</label>
@@ -140,8 +141,8 @@
                                 <label>Perawat</label>
                                 <select name="dataperawat_id" class="form-control">          
                                     <option value="">Pilih</option>
-                                    @foreach ($datatriase as $item)
-                                        <option value="{{ $item->id }}">{{ $item->perawat->nama }}</option>
+                                    @foreach ($dataperawat as $item)
+                                        <option value="{{ $item->id }}">{{ $item->nama }}</option>
                                     @endforeach
                                 </select>
                             </div>

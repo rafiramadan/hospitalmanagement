@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Pasien;
 use App\Models\Triase;
+use App\Models\Perawat;
 use Illuminate\Http\Request;
 
 class TriaseController extends Controller
@@ -28,7 +30,10 @@ class TriaseController extends Controller
     public function create()
     {
         $datatriase = Triase::all();
-        return view('main.tambahtriase', compact('datatriase'));
+        $datapasien = Pasien::all();
+        $dataperawat = Perawat::all();
+
+        return view('main.tambahtriase', compact('datapasien', 'datatriase', 'dataperawat'));
     }
 
     /**
@@ -91,10 +96,14 @@ class TriaseController extends Controller
      * @param  \App\Models\Triase  $triase
      * @return \Illuminate\Http\Response
      */
-    public function edit(Triase $triase)
+    public function edit(int $triase)
     {
+        $datatriase = Triase::find($triase);
+        // dd ($datatriase);
         $datatriase = Triase::all();
-        return view('main.edittriase', compact('datatriase'));
+        $datapasien = Pasien::all();
+        $dataperawat = Perawat::all();
+        return view('main.edittriase', compact('datatriase','datapasien','dataperawat'));
     }
 
     /**

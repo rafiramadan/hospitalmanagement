@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Pasien;
+use App\Models\Dokter;
 use App\Models\Pengantarlab;
 use Illuminate\Http\Request;
 
@@ -26,8 +28,10 @@ class PengantarlabController extends Controller
      */
     public function create()
     {
+        $datapasien = Pasien::all();
+        $datadokter = Dokter::all();
         $pengantarlab = Pengantarlab::all();
-        return view('main.tambahpengantarlab', compact('pengantarlab'));
+        return view('main.tambahpengantarlab', compact('pengantarlab', 'datapasien', 'datadokter'));
     }
 
     /**
