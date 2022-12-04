@@ -46,19 +46,12 @@
                         <form action="{{ url('rawatinap')}} " method="post">
                             @csrf
                             <div class="form-group">
-<<<<<<< HEAD
-                                <label>Data Pasien</label>
-                                <select name="datapasien_id" class="form-control">
-                                    <option value="">Pilih Pasien</option>
-                                    @foreach ($rawatinap as $item)
-                                        <option value="{{ $item->id }}">{{ $item->pasien->nama }}</option>
-=======
+
                                 <label>Pasien</label>
                                 <select name="datapasien_id" class="form-control">          
-                                    <option value="">Pilih</option>
+                                    <option value="">Pilih Pasien</option>
                                     @foreach ($datapasien as $item)
                                         <option value="{{ $item->id }}">{{ $item->nama }}</option>
->>>>>>> a1372e1ba1e8f046af507d577dd0c57d9539eb5c
                                     @endforeach
                                 </select>
                             </div>
@@ -82,17 +75,10 @@
                             </div>
                             <div class="form-group">
                                 <label>Dokter</label>
-<<<<<<< HEAD
                                 <select name="datadokter_id" class="form-control">
-                                    <option value="">Pilih Dokter</option>
-                                    @foreach ($rawatinap as $item)
-                                        <option value="{{ $item->id }}">{{ $item->dokter->nama }}</option>
-=======
-                                <select name="datadokter_id" class="form-control">          
-                                    <option value="">Pilih</option>
+                                    <option value="">Pilih Dokter</option>          
                                     @foreach ($datadokter as $item)
                                         <option value="{{ $item->id }}">{{ $item->nama }}</option>
->>>>>>> a1372e1ba1e8f046af507d577dd0c57d9539eb5c
                                     @endforeach
                                 </select>
                             </div>

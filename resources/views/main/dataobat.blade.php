@@ -24,16 +24,11 @@
 
 @section('content')
 <div class="content mt-3">
-<<<<<<< HEAD
-
-=======
->>>>>>> a1372e1ba1e8f046af507d577dd0c57d9539eb5c
     <div class="animated fadeIn">
         <div class="row">
 
             @if (session('status'))
             <div class="alert alert-success">
-                {{ session('status')}}
             </div>
             @endif
             <div class="col-md-12">
@@ -84,46 +79,7 @@
                     </div>
                 </div>
             </div>
-<<<<<<< HEAD
-            <div class="card-body table-responsive">
-                <table class="table table-bordered">
-                    <thead>
-                        <tr>
-                            <th>No.</th>
-                            <th>Kode Obat</th>
-                            <th>Nama</th>
-                            <th>Stok</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach ($dataobat as $item)
-                            <tr>
-                                <td>{{ $loop->iteration }} </td>
-                                <td>{{ $item->kode }} </td>
-                                <td>{{ $item->nama }} </td>
-                                <td>{{ $item->stok }} </td>
-                                <td class="text-center">
-                                     <a href="{{ url('dataobat/editobat/' .$item->id)}}" class="btn btn-primary btn-sm"> <i class="fa fa-pencil" ></i></a>
-                                     <form action="{{ url('dataobat/' .$item->id)}}" method="POST" class="d-inline" onsubmit="return confirm('Yakin hapus data?')">
-                                        @method('delete')
-                                        @csrf
-                                        <button class="btn btn-danger btn-sm"> <i class="fa fa-trash"></i> </button>
-                                     </form>
-                                </td>
-                            </tr>
-                        @endforeach
-                    </tbody>
-                </table>
-            </div>
-=======
->>>>>>> a1372e1ba1e8f046af507d577dd0c57d9539eb5c
         </div>
     </div>
 </div>
-<<<<<<< HEAD
 @endsection
-=======
-
-@endsection
->>>>>>> a1372e1ba1e8f046af507d577dd0c57d9539eb5c

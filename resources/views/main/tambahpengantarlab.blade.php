@@ -101,17 +101,10 @@
                             </div>
                             <div class="form-group">
                                 <label>Dokter</label>
-<<<<<<< HEAD
                                 <select name="datadokter_id" class="form-control">
                                     <option value="">Pilih Dokter</option>
-                                    @foreach ($pengantarlab as $item)
-                                        <option value="{{ $item->id }}">{{ $item->dokter->nama }}</option>
-=======
-                                <select name="datadokter_id" class="form-control">          
-                                    <option value="">Pilih</option>
                                     @foreach ($datadokter as $item)
                                         <option value="{{ $item->id }}">{{ $item->nama }}</option>
->>>>>>> a1372e1ba1e8f046af507d577dd0c57d9539eb5c
                                     @endforeach
                                 </select>
                             </div>

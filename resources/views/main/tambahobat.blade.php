@@ -24,14 +24,9 @@
 
 @section('content')
 <div class="content mt-3">
-<<<<<<< HEAD
-
-=======
->>>>>>> a1372e1ba1e8f046af507d577dd0c57d9539eb5c
     <div class="animated fadeIn">
         
         <div class="card">
-<<<<<<< HEAD
             <div class="pull-left">
                 <div class=" offset-md-4">
                     <br>
@@ -64,7 +59,6 @@
                             <button type="submit" class="btn btn-success">Simpan Data</button>
                         </form>
 
-=======
             <div class="card-header">
                     <strong>
                         Tambah Data Obat
@@ -97,7 +91,6 @@
                         </div>
                     </div>
                 </div>
->>>>>>> a1372e1ba1e8f046af507d577dd0c57d9539eb5c
             </div>
         </div>
     </div>

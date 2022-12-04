@@ -46,19 +46,11 @@
                         <form action="{{ url('rujuk')}} " method="post">
                             @csrf
                             <div class="form-group">
-<<<<<<< HEAD
                                 <label>Data Pasien</label>
                                 <select name="datapasien_id" class="form-control">
                                     <option value="">Pilih Pasien</option>
-                                    @foreach ($rujuk as $item)
-                                        <option value="{{ $item->id }}">{{ $item->pasien->nama }}</option>
-=======
-                                <label>Pasien</label>
-                                <select name="datapasien_id" class="form-control">          
-                                    <option value="">Pilih</option>
                                     @foreach ($datapasien as $item)
                                         <option value="{{ $item->id }}">{{ $item->nama }}</option>
->>>>>>> a1372e1ba1e8f046af507d577dd0c57d9539eb5c
                                     @endforeach
                                 </select>
                             </div>

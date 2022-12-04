@@ -44,14 +44,18 @@
                             <div class="input-group mb-3">
                                 <select name="datapasien_id" class="form-control">
                                     <option value="">Pilih Data Pasien</option>
-                                    @foreach ($obatpasien as $item)
-                                        <option value="{{ $item->id }}">{{ $item->pasien->nama }}</option>
+                                    @foreach ($datapasien as $item)
+                                        <option value="{{ $item->id }}">{{ $item->nama }}</option>
                                     @endforeach
                                 </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group mb-3">
                                 <select name="dataobat_id" class="form-control">
-                                    <option value="">Pilih Data Obat Pasien</option>
-                                    @foreach ($obatpasien as $item)
-                                        <option value="{{ $item->id }}">{{ $item->obat->nama }}</option>
+                                    <option value="">Pilih Data Obat</option>
+                                    @foreach ($dataobat as $item)
+                                        <option value="{{ $item->id }}">{{ $item->nama }}</option>
                                     @endforeach
                                 </select>
                             </div>

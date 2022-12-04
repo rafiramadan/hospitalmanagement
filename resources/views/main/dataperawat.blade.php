@@ -24,16 +24,11 @@
 
 @section('content')
 <div class="content mt-3">
-<<<<<<< HEAD
-
-=======
->>>>>>> a1372e1ba1e8f046af507d577dd0c57d9539eb5c
     <div class="animated fadeIn">
         <div class="row">
 
             @if (session('status'))
             <div class="alert alert-success">
-                {{ session('status')}}
             </div>
             @endif
 
@@ -82,38 +77,6 @@
                     </div>
                 </div>
             </div>
-<<<<<<< HEAD
-            <div class="card-body table-responsive">
-                <table class="table table-bordered">
-                    <thead>
-                        <tr>
-                            <th>No.</th>
-                            <th>No Perawat</th>
-                            <th>Nama</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach ($dataperawat as $item)
-                            <tr>
-                                <td>{{ $loop->iteration }} </td>
-                                <td>{{ $item->noperawat }} </td>
-                                <td>{{ $item->nama }} </td>
-                                <td class="text-center">
-                                     <a href="{{ url('dataperawat/editperawat/' .$item->id)}}" class="btn btn-primary btn-sm"> <i class="fa fa-pencil" ></i></a>
-                                     <form action="{{ url('dataperawat/' .$item->id)}}" method="POST" class="d-inline" onsubmit="return confirm('Yakin hapus data?')">
-                                        @method('delete')
-                                        @csrf
-                                        <button class="btn btn-danger btn-sm"> <i class="fa fa-trash"></i> </button>
-                                     </form>
-                                </td>
-                            </tr>
-                        @endforeach
-                    </tbody>
-                </table>
-            </div>
-=======
->>>>>>> a1372e1ba1e8f046af507d577dd0c57d9539eb5c
         </div>
     </div>
 </div>
