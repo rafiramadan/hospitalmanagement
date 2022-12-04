@@ -43,22 +43,22 @@
                         <a href="{{ url('datapasien') }}"> <i class="menu-icon fa fa-address-book-o"></i>Data Pasien </a>
                     </li>
                     <li>
-                        <a href="{{ url('datatriase') }}"> <i class="menu-icon fa fa-puzzle-piece"></i>Data Triase </a>
+                        <a href="{{ url('datatriase') }}"> <i class="menu-icon fa fa-file-text-o"></i>Data Triase </a>
                     </li>
                     <li>
-                        <a href="{{ url('pengantarlab') }}"> <i class="menu-icon fa fa-puzzle-piece"></i>Pengantar Lab </a>
+                        <a href="{{ url('pengantarlab') }}"> <i class="menu-icon fa fa-stethoscope"></i>Pengantar Lab </a>
                     </li>
                     <li>
-                        <a href="{{ url('rawatinap') }}"> <i class="menu-icon fa fa-puzzle-piece"></i>Rawat Inap </a>
+                        <a href="{{ url('rawatinap') }}"> <i class="menu-icon fa fa-hotel"></i>Rawat Inap </a>
                     </li>
                     <li>
-                        <a href="{{ url('rujuk') }}"> <i class="menu-icon fa fa-puzzle-piece"></i>Rujuk RS lain </a>
+                        <a href="{{ url('rujuk') }}"> <i class="menu-icon fa fa-hospital-o"></i>Rujuk RS lain </a>
                     </li>
                     <li>
-                        <a href="{{ url('obatpasien') }}"> <i class="menu-icon fa fa-puzzle-piece"></i>Obat Pasien </a>
+                        <a href="{{ url('obatpasien') }}"> <i class="menu-icon fa fa-plus-square"></i>Obat Pasien </a>
                     </li>
                     <li>
-                        <a href="{{ url('dataperawat') }}"> <i class="menu-icon fa fa-puzzle-piece"></i>Data Perawat </a>
+                        <a href="{{ url('dataperawat') }}"> <i class="menu-icon fa fa-user-md"></i>Data Perawat </a>
                     </li>
                     <li>
                         <a href="{{ url('datadokter') }}"> <i class="menu-icon fa fa-user-md"></i>Data Dokter </a>
@@ -66,7 +66,9 @@
                     <li>
                         <a href="{{ url('dataobat') }}"> <i class="menu-icon fa fa-medkit"></i>Data Obat </a>
                     </li>
-                    
+                    <li>
+                        <a href="{{('login')}}"> <i class="menu-icon fa fa-sign-out" class="fa fa-sign-out"></i>Logout </a>
+                    </li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </nav>

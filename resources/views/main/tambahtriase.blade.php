@@ -28,7 +28,7 @@
  
     <div class="animated fadeIn">
         <div class="card">
-            <div class="pull-left">
+            <div class="card-header">
                 <strong>
                     Tambah Data Triase
                 </strong>
@@ -134,7 +134,7 @@
                             </div>
                             <div class="form-group">
                                 <label>Tanggal Datang</label>
-                                <input type="text" name="tgldatang" class="form-control">
+                                <input type="text" name="tgldatang" class="form-control" placeholder="dd/mm/yy">
                             </div>
                             <div class="form-group">
                                 <label>Perawat</label>

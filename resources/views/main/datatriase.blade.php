@@ -24,59 +24,60 @@
 
 @section('content')
 <div class="content mt-3">
- 
+
     <div class="animated fadeIn">
 
         @if (session('status'))
-            <div class="alert alert-success">
-                {{ session('status')}}
-            </div>
+        <div class="alert alert-success">
+            {{ session('status')}}
+        </div>
         @endif
 
-        <div class="card">
-            <div class="pull-left">
-                <strong>
-                    Data Triase
-                </strong>
-                <div class="pull-right">
-                    <a href="{{ url('datatriase/create')}} " class="btn btn-success btn-sm">
-                        <i class="fa fa-plus"></i> Tambah Data
-                    </a>
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <strong>
+                        Data Triase
+                    </strong>
+                    <div class="pull-right">
+                        <a href="{{ url('datatriase/create')}} " class="btn btn-success btn-sm">
+                            <i class="fa fa-plus"></i> Tambah Data
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <div class="card-body table-responsive">
-                <table class="table table-bordered">
-                    <thead>
-                        <tr>
-                            <th>No.</th>
-                            <th>Pasien</th>
-                            <th>Cara Datang</th>
-                            <th>Jenis Kasus</th>
-                            <th>Kategori</th>
-                            <th>Kesadaran</th>
-                            <th>Respon Time</th>
-                            <th>Ruang</th>
-                            <th>Urgensi</th>
-                            <th>Jenis Pelayanan</th>
-                            <th>Alasan Datang</th>
-                            <th>Cara Masuk</th>
-                            <th>Keadaan Pra RS</th>
-                            <th>Tindakan Pra RS</th>
-                            <th>Keluhan</th>
-                            <th>Anamnesa</th>
-                            <th>Riwayat Penyakit</th>
-                            <th>Status Psikolog</th>
-                            <th>Riwayat Alergi</th>
-                            <th>Pengkajian Airway</th>
-                            <th>Pengkajian Breathing</th>
-                            <th>Pengkajian Circulation</th>
-                            <th>Tanggal Datang</th>
-                            <th>Perawat</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach ($datatriase as $item)
+                <div class="card-body table-responsive">
+                    <table class="table table-bordered" class="table table-striped table-bordered">
+                        <thead>
+                            <tr>
+                                <th>No.</th>
+                                <th>Pasien</th>
+                                <th>Cara Datang</th>
+                                <th>Jenis Kasus</th>
+                                <th>Kategori</th>
+                                <th>Kesadaran</th>
+                                <th>Respon Time</th>
+                                <th>Ruang</th>
+                                <th>Urgensi</th>
+                                <th>Jenis Pelayanan</th>
+                                <th>Alasan Datang</th>
+                                <th>Cara Masuk</th>
+                                <th>Keadaan Pra RS</th>
+                                <th>Tindakan Pra RS</th>
+                                <th>Keluhan</th>
+                                <th>Anamnesa</th>
+                                <th>Riwayat Penyakit</th>
+                                <th>Status Psikolog</th>
+                                <th>Riwayat Alergi</th>
+                                <th>Pengkajian Airway</th>
+                                <th>Pengkajian Breathing</th>
+                                <th>Pengkajian Circulation</th>
+                                <th>Tanggal Datang</th>
+                                <th>Perawat</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach ($datatriase as $item)
                             <tr>
                                 <td>{{ $loop->iteration }} </td>
                                 <td>{{ $item->pasien->nama }} </td>
@@ -103,21 +104,24 @@
                                 <td>{{ $item->tgldatang }} </td>
                                 <td>{{ $item->perawat->nama }} </td>
                                 <td class="text-center">
-                                     <a href="{{ url('datatriase/' .$item->id)}}" class="btn btn-warning btn-sm"> <i class="fa fa-eye" ></i></a> 
-                                     <a href="{{ url('datatriase/' .$item->id.'/edit')}}" class="btn btn-primary btn-sm"> <i class="fa fa-pencil" ></i></a> 
-                                     <form action="{{ url('datatriase/' .$item->id)}}" method="POST" class="d-inline" onsubmit="return confirm('Yakin hapus data?')">
+                                    <a href="{{ url('datatriase/' .$item->id)}}" class="btn btn-warning btn-sm"> <i
+                                            class="fa fa-eye"></i></a>
+                                    <a href="{{ url('datatriase/' .$item->id.'/edit')}}" class="btn btn-primary btn-sm">
+                                        <i class="fa fa-pencil"></i></a>
+                                    <form action="{{ url('datatriase/' .$item->id)}}" method="POST" class="d-inline"
+                                        onsubmit="return confirm('Yakin hapus data?')">
                                         @method('delete')
                                         @csrf
                                         <button class="btn btn-danger btn-sm"> <i class="fa fa-trash"></i> </button>
-                                     </form>
+                                    </form>
                                 </td>
                             </tr>
-                        @endforeach
-                    </tbody>
-                </table>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
-
 </div>
 @endsection

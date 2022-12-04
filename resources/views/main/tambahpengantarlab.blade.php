@@ -27,7 +27,7 @@
  
     <div class="animated fadeIn">
         <div class="card">
-            <div class="pull-left">
+            <div class="card-header">
                 <strong>
                     Tambah Data Pengantar Lab
                 </strong>

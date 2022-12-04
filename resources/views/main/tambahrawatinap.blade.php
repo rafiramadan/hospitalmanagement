@@ -27,7 +27,7 @@
  
     <div class="animated fadeIn">
         <div class="card">
-            <div class="pull-left">
+            <div class="card-header">
                 <strong>
                     Tambah Data Rawat Inap
                 </strong>
@@ -82,7 +82,7 @@
                             </div>
                             <div class="form-group">
                                 <label>Tanggal Masuk</label>
-                                <input type="text" name="tglmasuk" class="form-control">
+                                <input type="text" name="tglmasuk" class="form-control" placeholder="dd/mm/yy">
                             </div>
                             <button type="submit" class="btn btn-success">Simpan Data</button>
                         </form>
