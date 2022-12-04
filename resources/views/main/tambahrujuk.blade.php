@@ -24,28 +24,38 @@
 
 @section('content')
 <div class="content mt-3">
- 
+
     <div class="animated fadeIn">
         <div class="card">
+<<<<<<< HEAD
             <div class="card-header">
                 <strong>
                     Tambah Data Rujuk RS lain
                 </strong>
+=======
+            <div class="pull-left">
+                <div class=" offset-md-4">
+                    <br>
+                    <strong>
+                        <h2>
+                            Tambah Data Rujuk RS lain
+                        </h2>
+                    </strong>
+                </div>
+>>>>>>> dc6ebde8cf20a8b057a85190138ab90ed4953756
                 <div class="pull-right">
                     <a href="{{ url('rujuk')}} " class="btn btn-success btn-sm">
                         <i class="fa fa-undo"></i> Kembali
                     </a>
                 </div>
             </div>
-            <div class="card-body table-responsive">
-                <div class="row">
-                    <div class="col-md-4 offset-md-4">
+            <div class="card-body table-responsive" width="100%">
                         <form action="{{ url('rujuk')}} " method="post">
                             @csrf
                             <div class="form-group">
-                                <label>Pasien</label>
-                                <select name="datapasien_id" class="form-control">          
-                                    <option value="">Pilih</option>
+                                <label>Data Pasien</label>
+                                <select name="datapasien_id" class="form-control">
+                                    <option value="">Pilih Pasien</option>
                                     @foreach ($datapasien as $item)
                                         <option value="{{ $item->id }}">{{ $item->nama }}</option>
                                     @endforeach
@@ -53,20 +63,16 @@
                             </div>
                             <div class="form-group">
                                 <label>Diagnosa</label>
-                                <input type="text" name="diagnosa" class="form-control">
+                                <textarea class="form-control" placeholder="Tuliskan Keluhan Pasien" id="floatingTextarea" name="diagnosa"></textarea>
                             </div>
                             <div class="form-group">
-                                <label>RS Tujuan</label>
-                                <input type="text" name="rstujuan" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label>Poli Rujukan</label>
-                                <input type="text" name="polirujukan" class="form-control">
+                                <div class="input-group mb-3">
+                                    <input type="text" name="rstujuan" class="form-control" placeholder="Rumah Sakit Tujuan">
+                                    <input type="text" name="polirujukan" class="form-control" placeholder="Poli Rujukan">
+                                </div>
                             </div>
                             <button type="submit" class="btn btn-success">Simpan Data</button>
                         </form>
-                    </div>
-                </div>
             </div>
         </div>
     </div>

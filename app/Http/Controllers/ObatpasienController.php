@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Obat;
+use App\Models\Pasien;
 use App\Models\Obatpasien;
 use Illuminate\Http\Request;
 
@@ -25,8 +27,10 @@ class ObatpasienController extends Controller
      */
     public function create()
     {
+        $datapasien = Pasien::all();
+        $dataobat = Obat::all();
         $obatpasien = Obatpasien::all();
-        return view('main.tambahobatpasien', compact('obatpasien'));
+        return view('main.tambahobatpasien', compact('datapasien', 'dataobat'));
     }
 
     /**

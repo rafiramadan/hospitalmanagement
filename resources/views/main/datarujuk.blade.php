@@ -29,9 +29,7 @@
 
 
             @if (session('status'))
-            <div class="alert alert-success">
-                {{ session('status')}}
-            </div>
+            <div class="alert alert-success"></div>
             @endif
             <div class="col-md-12">
                 <div class="card">
@@ -84,4 +82,5 @@
             </div>
         </div>
     </div>
-    @endsection
+</div>
+@endsection

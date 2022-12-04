@@ -87,12 +87,18 @@
                                 <td>{{ $item->pekerjaan }} </td>
                                 <td>{{ $item->jenisbayar }} </td>
                                 <td class="text-center">
+<<<<<<< HEAD
                                     <a href="{{ url('datapasien/' .$item->id)}}" class="btn btn-warning btn-sm"> <i
                                             class="fa fa-eye"></i></a>
                                     <a href="{{ url('datapasien/editpasien/' .$item->id)}}"
                                         class="btn btn-primary btn-sm"> <i class="fa fa-pencil"></i></a>
                                     <form action="{{ url('datapasien/' .$item->id)}}" method="POST" class="d-inline"
                                         onsubmit="return confirm('Yakin hapus data?')">
+=======
+                                     <a href="{{ url('datapasien/editpasien/' .$item->id)}}" class="btn btn-primary btn-sm"> <i class="fa fa-eye" ></i></a>
+                                     <a href="{{ url('datapasien/editpasien/' .$item->id)}}" class="btn btn-primary btn-sm"> <i class="fa fa-pencil" ></i></a>
+                                     <form action="{{ url('datapasien/' .$item->id)}}" method="POST" class="d-inline" onsubmit="return confirm('Yakin hapus data?')">
+>>>>>>> dc6ebde8cf20a8b057a85190138ab90ed4953756
                                         @method('delete')
                                         @csrf
                                         <button class="btn btn-danger btn-sm"> <i class="fa fa-trash"></i></button>

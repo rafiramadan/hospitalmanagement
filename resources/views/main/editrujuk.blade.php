@@ -1,13 +1,13 @@
 @extends('layout')
 
-@section('title', 'Dashboard')
+@section('title', 'Rujuk RS lain')
 
 @section('breadcrumbs')
 <div class="breadcrumbs">
     <div class="col-sm-4">
         <div class="page-header float-left">
             <div class="page-title">
-                <h1>Data Perawat</h1>
+                <h1>Data Rujuk RS lain</h1>
             </div>
         </div>
     </div>
@@ -15,7 +15,6 @@
         <div class="page-header float-right">
             <div class="page-title">
                 <ol class="breadcrumb text-right">
-                    <li class="active"><i class="fa fa-dashboard"></i></li>
                 </ol>
             </div>
         </div>
@@ -33,27 +32,36 @@
                     <br>
                     <strong>
                         <h2>
-                            Tambah Data Perawat
+                            Tambah Data Rujuk RS lain
                         </h2>
                     </strong>
                 </div>
-            <div class="card-header">
-                <strong>
-                    Tambah Data Perawat
-                </strong>
                 <div class="pull-right">
-                    <a href="{{ url('dataobat')}} " class="btn btn-success btn-sm">
+                    <a href="{{ url('rujuk')}} " class="btn btn-success btn-sm">
                         <i class="fa fa-undo"></i> Kembali
                     </a>
                 </div>
             </div>
             <div class="card-body table-responsive" width="100%">
-                        <form action="{{ url('dataperawat')}} " method="post">
+                        <form action="{{ url('rujuk')}} " method="post">
                             @csrf
                             <div class="form-group">
+                                <label>Data Pasien</label>
+                                <select name="datapasien_id" class="form-control">
+                                    <option value="">Pilih Pasien</option>
+                                    @foreach ($rujuk as $item)
+                                        <option value="{{ $item->id }}">{{ $item->pasien->nama }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Diagnosa</label>
+                                <textarea class="form-control" placeholder="Tuliskan Keluhan Pasien" id="floatingTextarea" name="diagnosa"></textarea>
+                            </div>
+                            <div class="form-group">
                                 <div class="input-group mb-3">
-                                    <input type="text" name="noperawat" class="form-control" placeholder="NIRA" required>
-                                    <input type="text" name="nama" class="form-control" placeholder="Nama Perawat" required>
+                                    <input type="text" name="rstujuan" class="form-control" placeholder="Rumah Sakit Tujuan">
+                                    <input type="text" name="polirujukan" class="form-control" placeholder="Poli Rujukan">
                                 </div>
                             </div>
                             <button type="submit" class="btn btn-success">Simpan Data</button>
@@ -61,5 +69,6 @@
             </div>
         </div>
     </div>
+
 </div>
 @endsection
