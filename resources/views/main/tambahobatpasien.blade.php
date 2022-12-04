@@ -24,7 +24,7 @@
 
 @section('content')
 <div class="content mt-3">
- 
+
     <div class="animated fadeIn">
         <div class="card">
             <div class="pull-left">
@@ -37,32 +37,28 @@
                     </a>
                 </div>
             </div>
-            <div class="card-body table-responsive">
-                <div class="row">
-                    <div class="col-md-4 offset-md-4">
-                        <form action="{{ url('obatpasien')}} " method="post">
-                            @csrf
-                            <div class="form-group">
-                                <label>Pasien</label>
-                                <select name="datapasien_id" class="form-control">          
-                                    <option value="">Pilih</option>
+            <div class="card-body table-responsive" width ="100%">
+                <form action="{{ url('obatpasien')}} " method="post">
+                    @csrf
+                        <div class="form-group">
+                            <div class="input-group mb-3">
+                                <select name="datapasien_id" class="form-control">
+                                    <option value="">Pilih Data Pasien</option>
                                     @foreach ($obatpasien as $item)
                                         <option value="{{ $item->id }}">{{ $item->pasien->nama }}</option>
                                     @endforeach
                                 </select>
-                            </div>
-                            <div class="form-group">
-                                <label>Pasien</label>
-                                <select name="dataobat_id" class="form-control">          
-                                    <option value="">Pilih</option>
+                                <select name="dataobat_id" class="form-control">
+                                    <option value="">Pilih Data Obat Pasien</option>
                                     @foreach ($obatpasien as $item)
                                         <option value="{{ $item->id }}">{{ $item->obat->nama }}</option>
                                     @endforeach
                                 </select>
                             </div>
+                        </div>
                             <div class="form-group">
-                                <label>Diagnosa</label>
-                                <input type="text" name="diagnosa" class="form-control">
+                                <label>Diagnosa Pasien</label>
+                                <textarea class="form-control" placeholder="Tuliskan DiagnosaPasien" id="floatingTextarea" name="diagnosa"></textarea>
                             </div>
                             <div class="form-group">
                                 <label>Jumlah</label>
@@ -70,8 +66,7 @@
                             </div>
                             <button type="submit" class="btn btn-success">Simpan Data</button>
                         </form>
-                    </div>
-                </div>
+
             </div>
         </div>
     </div>

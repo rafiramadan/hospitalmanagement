@@ -25,13 +25,18 @@
 
 @section('content')
 <div class="content mt-3">
- 
+
     <div class="animated fadeIn">
         <div class="card">
             <div class="pull-left">
-                <strong>
-                    Edit Data Pasien
-                </strong>
+                <div class=" offset-md-4">
+                    <br>
+                    <strong>
+                        <h2>
+                            Edit Data Pasien
+                        </h2>
+                    </strong>
+                </div>
                 <div class="pull-right">
                     <a href="{{ url('datapasien')}} " class="btn btn-success btn-sm">
                         <i class="fa fa-undo"></i> Kembali
@@ -39,75 +44,75 @@
                 </div>
             </div>
             <div class="card-body table-responsive">
-                <div class="row">
-                    <div class="col-md-4 offset-md-4">
-                        <form action="{{ url('datapasien/' .$datapasien->id)}} " method="post">
-                            @method('patch')
-                            @csrf
+                <form action="{{ url('datapasien/' .$datapasien->id)}} " method="post">
+                    @method('patch')
+                    @csrf
                             <div class="form-group">
-                                <label>No Pasien</label>
-                                <input type="text" name="nopasien" class="form-control" value="{{ $datapasien->nopasien }}" required>
+                                <input type="text" name="nopasien" class="form-control" placeholder="Nomor Rekam Medis Pasien" value="{{ $datapasien->nopasien }}" required>
                             </div>
                             <div class="form-group">
-                                <label>Nama</label>
-                                <input type="text" name="nama" class="form-control" value="{{ $datapasien->nama }}" required>
+                                <div class="input-group mb-3">
+                                    <input type="text" name="nama" class="form-control" placeholder="Nama Lengkap Pasien" value="{{ $datapasien->nama }}" required>
+                                    <input type="text" name="nik" class="form-control" placeholder="NIK" value="{{ $datapasien->nik }}" required>
+                                </div>
                             </div>
                             <div class="form-group">
-                                <label>NIK</label>
-                                <input type="text" name="nik" class="form-control" value="{{ $datapasien->nik }}" required>
+                                <div class="input-group mb-3">
+                                    <input type="text" name="tempatlahir" class="form-control" placeholder="Tempat Lahir Pasien" value="{{ $datapasien->tempatlahir }}" required>
+                                    <input type="text" name="tgllahir" class="form-control" placeholder="Tanggal Lahir (Tanggal-Bulan-Tahun)" value="{{ $datapasien->tgllahir }}" required>
+                                </div>
                             </div>
                             <div class="form-group">
-                                <label>Tempat Lahir</label>
-                                <input type="text" name="tempatlahir" class="form-control" value="{{ $datapasien->tempatlahir }}" required>
+                                <div class="input-group mb-3">
+                                    <input type="text" name="umur" class="form-control" placeholder="Umur" value="{{ $datapasien->umur }}">
+                                        <select class="form-select" name="kategori" style="background-color: rgb(230, 230, 230)" value="{{ $datapasien->kategori }}">
+                                            <option style="color:grey" disabled="disabled" selected="selected">Kategori</option>
+                                            <option value="Bayi">Bayi</option>
+                                            <option value="Balita">Balita</option>
+                                            <option value="Remaja">Remaja</option>
+                                            <option value="Dewasa">Dewasa</option>
+                                        </select>
+                                        <select name="jeniskelamin" class="form-select" style="background-color: rgb(230, 230, 230)" value="{{ $datapasien->jeniskelamin }}">
+                                            <option style="color:grey" disabled="disabled" selected="selected">Pilih Jenis Kelamin</option>
+                                            <option value="L">Laki-Laki</option>
+                                            <option value="P">Perempuan</option>
+                                        </select>
+                                        <select name="goldar" class="form-select" style="background-color: rgb(230, 230, 230)" vvalue="{{ $datapasien->goldar }}">
+                                            <option style="color:grey" disabled="disabled" selected="selected">Pilih Golongan Darah</option>
+                                            <option value="A">Golongan Darah : A</option>
+                                            <option value="B">Golongan Darah : B</option>
+                                            <option value="AB">Golongan Darah : AB</option>
+                                            <option value="O">Golongan Darah : O</option>
+                                        </select>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="form-group">
+                                <div class="input-group mb-3">
+                                <input type="text" name="alamat" class="form-control" placeholder="Alamat Pasien" value="{{ $datapasien->alamat }}">
+                                <input type="text" name="notelp" class="form-control" placeholder="Nomor Telpon Pasien" value="{{ $datapasien->notelp }}">
+                                </div>
                             </div>
                             <div class="form-group">
-                                <label>Tanggal Lahir</label>
-                                <input type="text" name="tgllahir" class="form-control" value="{{ $datapasien->tgllahir }}" required>
+                                <input type="text" name="pekerjaan" class="form-control" placeholder="Pekerjaan Pasien" value="{{ $datapasien->pekerjaan }}">
                             </div>
                             <div class="form-group">
-                                <label>Umur</label>
-                                <input type="text" name="umur" class="form-control"value="{{ $datapasien->umur }}">
+                                <div class=" offset-md-4">
+                                    <div class="input-group mb-3">
+                                        <label class="input-group-text">Jenis Pembayaran</label>
+                                            <select name="jenisbayar" class="form-select" style="background-color: rgb(230, 230, 230)" value="{{ $datapasien->jenisbayar }}" required>
+                                                <option style="color:grey" disabled="disabled" selected="selected">Pilih Jenis Bayar</option>
+                                                <option value="BPJS">BPJS</option>
+                                                <option value="Umum">Umum</option>
+                                                <option value="Asuransi">Asuransi</option>
+                                            </select>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <label>Kategori</label>
-                                <input type="text" name="kategori" class="form-control" value="{{ $datapasien->kategori }}">
-                            </div>
-                            <div class="form-group">
-                                <label>Jenis Kelamin</label>
-                                <select name="jeniskelamin" class="form-select" value="{{ $datapasien->jeniskelamin }}">
-                                    <option value="">Pilih Jenis Kelamin</option>
-                                    <option value="L">L</option>
-                                    <option value="P">P</option>
-                            </div>
-                            <div class="form-group">
-                                <label>Alamat</label>
-                                <input type="text" name="alamat" class="form-control" value="{{ $datapasien->alamat }}">
-                            </div>
-                            <div class="form-group">
-                                <label>No Telp</label>
-                                <input type="text" name="notelp" class="form-control" value="{{ $datapasien->notelp }}">
-                            </div>
-                            <div class="form-group">
-                                <label>Golongan Darah</label>
-                                <input type="text" name="goldar" class="form-control" value="{{ $datapasien->goldar }}">
-                            </div>
-                            <div class="form-group">
-                                <label>Pekerjaan</label>
-                                <input type="text" name="pekerjaan" class="form-control" value="{{ $datapasien->pekerjaan }}">
-                            </div>
-                            <div class="form-group">
-                                <label>Jenis Bayar</label>
-                                <select name="jenisbayar" class="form-select" value="{{ $datapasien->jenisbayar }}">
-                                    <option value="">Pilih Jenis Bayar</option>
-                                    <option value="BPJS">BPJS</option>
-                                    <option value="Umum">Umum</option>
-                                    <option value="Asuransi">Asuransi</option>
-                                </select>
-                            </div>
-                            <button type="submit" class="btn btn-success">Simpan Data</button>
+                            <button type="submit" class="btn btn-success" style="width: 100%">Simpan Data</button>
                         </form>
-                    </div>
-                </div>
+
+
             </div>
         </div>
     </div>

@@ -24,27 +24,30 @@
 
 @section('content')
 <div class="content mt-3">
- 
+
     <div class="animated fadeIn">
         <div class="card">
             <div class="pull-left">
-                <strong>
-                    Tambah Data Pengantar Lab
-                </strong>
+                <div class=" offset-md-4">
+                    <br>
+                    <strong>
+                        <h2>
+                            Tambah Data Pengantar Lab
+                        </h2>
+                    </strong>
+                </div>
                 <div class="pull-right">
                     <a href="{{ url('pengantarlab')}} " class="btn btn-success btn-sm">
                         <i class="fa fa-undo"></i> Kembali
                     </a>
                 </div>
             </div>
-            <div class="card-body table-responsive">
-                <div class="row">
-                    <div class="col-md-4 offset-md-4">
+            <div class="card-body table-responsive" width="100%">
                         <form action="{{ url('pengantarlab')}} " method="post">
                             @csrf
                             <div class="form-group">
                                 <label>Pasien</label>
-                                <select name="datapasien_id" class="form-control">          
+                                <select name="datapasien_id" class="form-control">
                                     <option value="">Pilih</option>
                                     @foreach ($pengantarlab as $item)
                                         <option value="{{ $item->id }}">{{ $item->pasien->nama }}</option>
@@ -52,78 +55,64 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label>Diagnosa</label>
-                                <input type="text" name="diagnosaklinik" class="form-control">
+                                <textarea class="form-control" placeholder="Tuliskan Diagnosa Pasien" id="floatingTextarea" name="diagnosaklinik"></textarea>
                             </div>
                             <div class="form-group">
-                                <label>Lab Hematologi</label>
-                                <input type="text" name="labhematologi" class="form-control">
+                                <div class="input-group mb-3">
+                                    <label class="input-group-text">Lab Hematologi</label>
+                                    <input type="text" name="labhematologi" class="form-control" placeholder="Tulisakan Hasil Lab Hematologi">
+                                    <label class="input-group-text">Lab Urine</label>
+                                    <input type="text" name="laburine" class="form-control" placeholder="Tulisakan Hasil Lab Urine">
+                                    <label class="input-group-text">Lab Faeces</label>
+                                    <input type="text" name="labfaeces" class="form-control" placeholder="Tulisakan Hasil Lab Faeces">
+                                </div>
                             </div>
                             <div class="form-group">
-                                <label>Lab Urine</label>
-                                <input type="text" name="laburine" class="form-control">
+                                <div class="input-group mb-3">
+                                    <label class="input-group-text">Lab Glukosa Darah</label>
+                                    <input type="text" name="labglukosadarah" class="form-control" placeholder="Tulisakan Hasil Lab Glukosa Darah">
+                                    <label class="input-group-text">Lab Faal Hati</label>
+                                    <input type="text" name="labfaalhati" class="form-control" placeholder="Tulisakan Hasil Lab Faal Hati">
+                                    <label class="input-group-text">Lab Profil Lipid</label>
+                                    <input type="text" name="labprofillipid" class="form-control" placeholder="Tulisakan Hasil Lab Profil Lipid">
+                                </div>
                             </div>
                             <div class="form-group">
-                                <label>Lab Faeces</label>
-                                <input type="text" name="labfaeces" class="form-control">
+                                <div class="input-group mb-3">
+                                    <label class="input-group-text">Lab Tumor Maker</label>
+                                    <input type="text" name="labtumormaker" class="form-control" placeholder="Tulisakan Hasil Lab Tumor Maker">
+                                    <label class="input-group-text">Lab Elektrolit</label>
+                                    <input type="text" name="labelektrolit" class="form-control" placeholder="Tulisakan Hasil Lab Elektrolit">
+                                    <label class="input-group-text">Lab Mikrobiologi</label>
+                                    <input type="text" name="labmikrobiologi" class="form-control" placeholder="Tulisakan Hasil Lab Mikrobiologi">
+                                </div>
                             </div>
                             <div class="form-group">
-                                <label>Lab Glukosa Darah</label>
-                                <input type="text" name="labglukosadarah" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label>Lab Faal Hati</label>
-                                <input type="text" name="labfaalhati" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label>Lab Profil Lipid</label>
-                                <input type="text" name="labprofillipid" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label>Lab Tumor Maker</label>
-                                <input type="text" name="labtumormaker" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label>Lab Elektrolit</label>
-                                <input type="text" name="labelektrolit" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label>Lab Mikrobiologi</label>
-                                <input type="text" name="labmikrobiologi" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label>Lab Tiroid</label>
-                                <input type="text" name="labtiroid" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label>Lab Munoserologi</label>
-                                <input type="text" name="labmunoserologi" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label>Lab Torch</label>
-                                <input type="text" name="labtorch" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label>Lab Hepatitis</label>
-                                <input type="text" name="labhepatitis" class="form-control">
+                                <div class="input-group mb-3">
+                                    <label class="input-group-text">Lab Tiroid</label>
+                                    <input type="text" name="labtiroid" class="form-control" placeholder="Tulisakan Hasil Lab Tiroid">
+                                    <label class="input-group-text">Lab Munoserologi</label>
+                                    <input type="text" name="labmunoserologi" class="form-control" placeholder="Tulisakan Hasil Lab Munoserologi">
+                                    <label class="input-group-text">Lab Torch</label>
+                                    <input type="text" name="labtorch" class="form-control" placeholder="Tulisakan Hasil Lab Torch">
+                                    <label class="input-group-text">Lab Hepatitis</label>
+                                    <input type="text" name="labhepatitis" class="form-control" placeholder="Tulisakan Hasil Lab Hepatitis">
+                                </div>
                             </div>
                             <div class="form-group">
                                 <label>Dokter</label>
-                                <select name="datadokter_id" class="form-control">          
-                                    <option value="">Pilih</option>
+                                <select name="datadokter_id" class="form-control">
+                                    <option value="">Pilih Dokter</option>
                                     @foreach ($pengantarlab as $item)
                                         <option value="{{ $item->id }}">{{ $item->dokter->nama }}</option>
                                     @endforeach
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label>Catatan</label>
-                                <input type="text" name="catatan" class="form-control">
+                                <textarea class="form-control" placeholder=" Catatan (Optional)" id="floatingTextarea" name="catatan"></textarea>
                             </div>
                             <button type="submit" class="btn btn-success">Simpan Data</button>
                         </form>
-                    </div>
-                </div>
             </div>
         </div>
     </div>

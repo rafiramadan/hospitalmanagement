@@ -24,7 +24,7 @@
 
 @section('content')
 <div class="content mt-3">
- 
+
     <div class="animated fadeIn">
 
         @if (session('status'))
@@ -61,7 +61,7 @@
                                 <td>{{ $item->noperawat }} </td>
                                 <td>{{ $item->nama }} </td>
                                 <td class="text-center">
-                                     <a href="{{ url('dataperawat/editperawat/' .$item->id)}}" class="btn btn-primary btn-sm"> <i class="fa fa-pencil" ></i></a> 
+                                     <a href="{{ url('dataperawat/editperawat/' .$item->id)}}" class="btn btn-primary btn-sm"> <i class="fa fa-pencil" ></i></a>
                                      <form action="{{ url('dataperawat/' .$item->id)}}" method="POST" class="d-inline" onsubmit="return confirm('Yakin hapus data?')">
                                         @method('delete')
                                         @csrf

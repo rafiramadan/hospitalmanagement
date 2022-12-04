@@ -25,13 +25,18 @@
 
 @section('content')
 <div class="content mt-3">
- 
+
     <div class="animated fadeIn">
         <div class="card">
             <div class="pull-left">
-                <strong>
-                    Edit Data Perawat
-                </strong>
+                <div class=" offset-md-4">
+                    <br>
+                    <strong>
+                        <h2>
+                            Edit Data Perawat
+                        </h2>
+                    </strong>
+                </div>
                 <div class="pull-right">
                     <a href="{{ url('dataperawat')}} " class="btn btn-success btn-sm">
                         <i class="fa fa-undo"></i> Kembali
@@ -39,23 +44,18 @@
                 </div>
             </div>
             <div class="card-body table-responsive">
-                <div class="row">
-                    <div class="col-md-4 offset-md-4">
                         <form action="{{ url('dataperawat/' .$dataperawat->id)}} " method="post">
                             @method('patch')
                             @csrf
-                            <div class="form-group">
-                                <label>No Perawat</label>
-                                <input type="text" name="noperawat" class="form-control" value="{{ $dataperawat->noperawat }}" required>
-                            </div>
-                            <div class="form-group">
-                                <label>Nama</label>
-                                <input type="text" name="nama" class="form-control" value="{{ $dataperawat->nama }}" required>
-                            </div>
+                                <div class="form-group">
+                                    <div class="input-group mb-3">
+                                        <input type="text" name="noperawat" class="form-control" placeholder="NIRA" value="{{ $dataperawat->noperawat }}" required>
+                                        <input type="text" name="nama" class="form-control" placeholder="Nama Perawat" value="{{ $dataperawat->nama }}" require>
+                                    </div>
+                                </div>
                             <button type="submit" class="btn btn-success">Simpan Data</button>
                         </form>
-                    </div>
-                </div>
+
             </div>
         </div>
     </div>

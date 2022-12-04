@@ -24,13 +24,18 @@
 
 @section('content')
 <div class="content mt-3">
- 
+
     <div class="animated fadeIn">
         <div class="card">
             <div class="pull-left">
-                <strong>
-                    Tambah Data Rawat Inap
-                </strong>
+                <div class=" offset-md-4">
+                    <br>
+                    <strong>
+                        <h2>
+                            Tambah Data Rawat Inap
+                        </h2>
+                    </strong>
+                </div>
                 <div class="pull-right">
                     <a href="{{ url('rawatinap')}} " class="btn btn-success btn-sm">
                         <i class="fa fa-undo"></i> Kembali
@@ -38,26 +43,22 @@
                 </div>
             </div>
             <div class="card-body table-responsive">
-                <div class="row">
-                    <div class="col-md-4 offset-md-4">
                         <form action="{{ url('rawatinap')}} " method="post">
                             @csrf
                             <div class="form-group">
-                                <label>Pasien</label>
-                                <select name="datapasien_id" class="form-control">          
-                                    <option value="">Pilih</option>
+                                <label>Data Pasien</label>
+                                <select name="datapasien_id" class="form-control">
+                                    <option value="">Pilih Pasien</option>
                                     @foreach ($rawatinap as $item)
                                         <option value="{{ $item->id }}">{{ $item->pasien->nama }}</option>
                                     @endforeach
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label>Poli IGD</label>
-                                <input type="text" name="poliigd" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label>Ruang</label>
-                                <input type="text" name="ruang" class="form-control">
+                                <div class="input-group mb-3">
+                                    <input type="text" name="poliigd" class="form-control" placeholder="Poli IGD">
+                                    <input type="text" name="ruang" class="form-control" placeholder="Ruang">
+                                </div>
                             </div>
                             <div class="form-group">
                                 <label>Kelas</label>
@@ -65,7 +66,7 @@
                             </div>
                             <div class="form-group">
                                 <label>Diagnosa</label>
-                                <input type="text" name="diagnosa" class="form-control">
+                                <textarea class="form-control" placeholder="Tuliskan Diagnosa Pasien" id="floatingTextarea" name="diagnosa"></textarea>
                             </div>
                             <div class="form-group">
                                 <label>Discharge Planning</label>
@@ -73,8 +74,8 @@
                             </div>
                             <div class="form-group">
                                 <label>Dokter</label>
-                                <select name="datadokter_id" class="form-control">          
-                                    <option value="">Pilih</option>
+                                <select name="datadokter_id" class="form-control">
+                                    <option value="">Pilih Dokter</option>
                                     @foreach ($rawatinap as $item)
                                         <option value="{{ $item->id }}">{{ $item->dokter->nama }}</option>
                                     @endforeach
@@ -86,8 +87,6 @@
                             </div>
                             <button type="submit" class="btn btn-success">Simpan Data</button>
                         </form>
-                    </div>
-                </div>
             </div>
         </div>
     </div>

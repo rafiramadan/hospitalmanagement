@@ -25,35 +25,35 @@
 
 @section('content')
 <div class="content mt-3">
- 
+
     <div class="animated fadeIn">
         <div class="card">
             <div class="pull-left">
-                <strong>
-                    Tambah Data Perawat
-                </strong>
+                <div class=" offset-md-4">
+                    <br>
+                    <strong>
+                        <h2>
+                            Tambah Data Perawat
+                        </h2>
+                    </strong>
+                </div>
                 <div class="pull-right">
-                    <a href="{{ url('dataperawat')}} " class="btn btn-success btn-sm">
+                    <a href="{{ url('dataobat')}} " class="btn btn-success btn-sm">
                         <i class="fa fa-undo"></i> Kembali
                     </a>
                 </div>
             </div>
-            <div class="card-body table-responsive">
-                <div class="row">
-                    <div class="col-md-4 offset-md-4">
+            <div class="card-body table-responsive" width="100%">
                         <form action="{{ url('dataperawat')}} " method="post">
                             @csrf
                             <div class="form-group">
-                                <label>No Perawat</label>
-                                <input type="text" name="noperawat" class="form-control" required>
+                                <div class="input-group mb-3">
+                                    <input type="text" name="noperawat" class="form-control" placeholder="NIRA" required>
+                                    <input type="text" name="nama" class="form-control" placeholder="Nama Perawat" required>
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <label>Nama</label>
-                                <input type="text" name="nama" class="form-control" required>
                             <button type="submit" class="btn btn-success">Simpan Data</button>
                         </form>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
