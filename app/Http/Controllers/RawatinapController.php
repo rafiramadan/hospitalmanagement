@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Pasien;
+use App\Models\Dokter;
 use App\Models\Rawatinap;
 use Illuminate\Http\Request;
 
@@ -27,8 +29,10 @@ class RawatinapController extends Controller
      */
     public function create()
     {
+        $datapasien = Pasien::all();
+        $datadokter = Dokter::all();
         $rawatinap = Rawatinap::all();
-        return view('main.tambahrawatinap', compact('rawatinap'));
+        return view('main.tambahrawatinap', compact('rawatinap', 'datapasien', 'datadokter'));
     }
 
     /**

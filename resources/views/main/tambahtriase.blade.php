@@ -72,6 +72,39 @@
                                     @endforeach
                             </select>
                         </div>
+                <div class="row">
+                    <div class="col-md-4 offset-md-4">
+                        <form action="{{ url('datatriase')}} " method="post">
+                            @csrf
+                            <div class="form-group">
+                                <label>Pasien</label>
+                                <select name="datapasien_id" class="form-control">
+                                    <option value="">Pilih</option>
+                                    @foreach ($datapasien as $item)
+                                        <option value="{{ $item->id }}">{{ $item->nama }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Cara Datang</label>
+                                <input type="text" name="caradatang" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Jeniskasus</label>
+                                <input type="text" name="jeniskasus" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Kategori</label>
+                                <input type="text" name="kategori" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Kesadaran</label>
+                                <input type="text" name="kesadaran" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Respon Time</label>
+                                <input type="text" name="respontime" class="form-control">
+                            </div>
                             <div class="form-group">
                                 <div class="input-group mb-3">
                                     <label class="input-group-text">Data Pasien Saat Datang</label>
@@ -136,6 +169,8 @@
                                         </label>
                                     </div>
                                 </div>
+                                <label>Jenis Pelayanan</label>
+                                <input type="text" name="jenispelayanan" class="form-control">
                             </div>
                             <br><hr><br>
                             <div class="form-group">
@@ -256,8 +291,8 @@
                                 <label>Perawat</label>
                                 <select name="dataperawat_id" class="form-control">
                                     <option value="">Pilih</option>
-                                    @foreach ($datatriase as $item)
-                                        <option value="{{ $item->id }}">{{ $item->perawat->nama }}</option>
+                                    @foreach ($dataperawat as $item)
+                                        <option value="{{ $item->id }}">{{ $item->nama }}</option>
                                     @endforeach
                                 </select>
                             </div>

@@ -24,26 +24,65 @@
 
 @section('content')
 <div class="content mt-3">
+<<<<<<< HEAD
 
+=======
+>>>>>>> a1372e1ba1e8f046af507d577dd0c57d9539eb5c
     <div class="animated fadeIn">
+        <div class="row">
 
-        @if (session('status'))
+            @if (session('status'))
             <div class="alert alert-success">
                 {{ session('status')}}
             </div>
-        @endif
+            @endif
 
-        <div class="card">
-            <div class="pull-left">
-                <strong>
-                    Data Perawat
-                </strong>
-                <div class="pull-right">
-                    <a href="{{ url('dataperawat/tambahperawat')}} " class="btn btn-success btn-sm">
-                        <i class="fa fa-plus"></i> Tambah Data
-                    </a>
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <strong>
+                            Data Perawat
+                        </strong>
+                        <div class="pull-right">
+                            <a href="{{ url('dataperawat/tambahperawat')}} " class="btn btn-success btn-sm">
+                                <i class="fa fa-plus"></i> Tambah Data
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body table-responsive">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>No.</th>
+                                    <th>No Perawat</th>
+                                    <th>Nama</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach ($dataperawat as $item)
+                                <tr>
+                                    <td>{{ $loop->iteration }} </td>
+                                    <td>{{ $item->noperawat }} </td>
+                                    <td>{{ $item->nama }} </td>
+                                    <td class="text-center">
+                                        <a href="{{ url('dataperawat/editperawat/' .$item->id)}}"
+                                            class="btn btn-primary btn-sm"> <i class="fa fa-pencil"></i></a>
+                                        <form action="{{ url('dataperawat/' .$item->id)}}" method="POST"
+                                            class="d-inline" onsubmit="return confirm('Yakin hapus data?')">
+                                            @method('delete')
+                                            @csrf
+                                            <button class="btn btn-danger btn-sm"> <i class="fa fa-trash"></i> </button>
+                                        </form>
+                                    </td>
+                                </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
+<<<<<<< HEAD
             <div class="card-body table-responsive">
                 <table class="table table-bordered">
                     <thead>
@@ -73,8 +112,9 @@
                     </tbody>
                 </table>
             </div>
+=======
+>>>>>>> a1372e1ba1e8f046af507d577dd0c57d9539eb5c
         </div>
     </div>
-
 </div>
 @endsection

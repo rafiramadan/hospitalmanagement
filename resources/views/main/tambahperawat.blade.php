@@ -28,6 +28,7 @@
 
     <div class="animated fadeIn">
         <div class="card">
+<<<<<<< HEAD
             <div class="pull-left">
                 <div class=" offset-md-4">
                     <br>
@@ -37,6 +38,12 @@
                         </h2>
                     </strong>
                 </div>
+=======
+            <div class="card-header">
+                <strong>
+                    Tambah Data Perawat
+                </strong>
+>>>>>>> a1372e1ba1e8f046af507d577dd0c57d9539eb5c
                 <div class="pull-right">
                     <a href="{{ url('dataobat')}} " class="btn btn-success btn-sm">
                         <i class="fa fa-undo"></i> Kembali
@@ -52,11 +59,17 @@
                                     <input type="text" name="nama" class="form-control" placeholder="Nama Perawat" required>
                                 </div>
                             </div>
+<<<<<<< HEAD
                             <button type="submit" class="btn btn-success">Simpan Data</button>
+=======
+                            <div class="form-group">
+                                <label>Nama</label>
+                                <input type="text" name="nama" class="form-control" required>
+                                <button type="submit" class="btn btn-success">Simpan Data</button>
+>>>>>>> a1372e1ba1e8f046af507d577dd0c57d9539eb5c
                         </form>
             </div>
         </div>
     </div>
-
 </div>
 @endsection

@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title', 'Dashboard')
+@section('title', 'Perawat')
 
 @section('breadcrumbs')
 <div class="breadcrumbs">
