@@ -16,22 +16,22 @@ return new class extends Migration
         Schema::create('pengantarlab', function (Blueprint $table) {
             $table->id();
             $table->foreignId('datapasien_id')->constrained('datapasien')->onDelete('cascade')->onUpdate('cascade');
-            $table->string('diagnosaklinik');
-            $table->string('labhematologi');
-            $table->string('laburine');
-            $table->string('labfaeces');
-            $table->string('labglukosadarah');
-            $table->string('labfaalhati');
-            $table->string('labprofillipid');
-            $table->string('labtumormaker');
-            $table->string('labelektrolit');
-            $table->string('labmikrobiologi');
-            $table->string('labtiroid');
-            $table->string('labmunoserologi');
-            $table->string('labtorch');
-            $table->string('labhepatitis');
+            $table->string('diagnosaklinik'); 
+            $table->string('labhematologi')->nullable();
+            $table->string('laburine')->nullable();;
+            $table->string('labfaeces')->nullable();;
+            $table->string('labglukosadarah')->nullable();;
+            $table->string('labfaalhati')->nullable();;
+            $table->string('labprofillipid')->nullable();;
+            $table->string('labtumormaker')->nullable();;
+            $table->string('labelektrolit')->nullable();;
+            $table->string('labmikrobiologi')->nullable();;
+            $table->string('labtiroid')->nullable();;
+            $table->string('labmunoserologi')->nullable();;
+            $table->string('labtorch')->nullable();;
+            $table->string('labhepatitis')->nullable();;
             $table->foreignId('datadokter_id')->constrained('datadokter')->onDelete('cascade')->onUpdate('cascade');
-            $table->String('catatan');
+            $table->String('catatan')->nullable();;
             $table->timestamps();
         });
     }
