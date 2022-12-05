@@ -27,18 +27,10 @@
 
     <div class="animated fadeIn">
         <div class="card">
-<<<<<<< HEAD
-
             <div class="card-header">
                 <strong>
                     Tambah Data Rawat Inap
                 </strong>
-=======
-            <div class="card-header">
-                <strong>
-                    Tambah Data Rawat Inap
-                </strong>           
->>>>>>> b9d90574f07ac3a3fef37b83f5a06eb26b556d87
                 <div class="pull-right">
                     <a href="{{ url('rawatinap')}} " class="btn btn-success btn-sm">
                         <i class="fa fa-undo"></i> Kembali
@@ -51,7 +43,7 @@
                             <div class="form-group">
 
                                 <label>Pasien</label>
-                                <select name="datapasien_id" class="form-control">          
+                                <select name="datapasien_id" class="form-control">
                                     <option value="">Pilih Pasien</option>
                                     @foreach ($datapasien as $item)
                                         <option value="{{ $item->id }}">{{ $item->nama }}</option>
@@ -79,7 +71,7 @@
                             <div class="form-group">
                                 <label>Dokter</label>
                                 <select name="datadokter_id" class="form-control">
-                                    <option value="">Pilih Dokter</option>          
+                                    <option value="">Pilih Dokter</option>
                                     @foreach ($datadokter as $item)
                                         <option value="{{ $item->id }}">{{ $item->nama }}</option>
                                     @endforeach

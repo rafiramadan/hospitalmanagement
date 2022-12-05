@@ -27,18 +27,10 @@
 
     <div class="animated fadeIn">
         <div class="card">
-<<<<<<< HEAD
-
-=======
->>>>>>> b9d90574f07ac3a3fef37b83f5a06eb26b556d87
             <div class="card-header">
                 <strong>
                     Tambah Data Rujuk RS lain
                 </strong>
-<<<<<<< HEAD
-
-=======
->>>>>>> b9d90574f07ac3a3fef37b83f5a06eb26b556d87
                 <div class="pull-right">
                     <a href="{{ url('rujuk')}} " class="btn btn-success btn-sm">
                         <i class="fa fa-undo"></i> Kembali

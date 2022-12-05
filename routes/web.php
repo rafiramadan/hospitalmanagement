@@ -83,9 +83,6 @@ Route::resource('rawatinap', RawatinapController::class);
 Route::resource('rujuk', RujukController::class);
 
 Route::resource('obatpasien', ObatpasienController::class);
-<<<<<<< HEAD
 
-=======
->>>>>>> b9d90574f07ac3a3fef37b83f5a06eb26b556d87
 Route::resource('obatpasien', ObatpasienController::class);
 Route::get('rujuk/editrujuk/{id}', [RujukController::class, 'editrujuk']);

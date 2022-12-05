@@ -32,10 +32,6 @@
                     <strong>
                             Tambah Data Dokter
                     </strong>
-            <div class="card-header">
-                <strong>
-                    Tambah Data Dokter
-                </strong>
                 <div class="pull-right">
                     <a href="{{ url('datadokter')}} " class="btn btn-success btn-sm">
                         <i class="fa fa-undo"></i> Kembali

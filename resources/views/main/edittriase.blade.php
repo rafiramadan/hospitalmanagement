@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title', 'Data Triase')
+@section('title', 'Triase')
 
 @section('breadcrumbs')
 <div class="breadcrumbs">
@@ -33,7 +33,7 @@
                     <br>
                         <strong>
                             <h2>
-                                Edit Data Triase
+                                Tambah Data Triase
                             </h2>
                         </strong>
                 </div>
@@ -64,47 +64,14 @@
                                         </div>
                                     </div>
                     </div>
-                        <div class="form-group">
-                            <select name="datapasien_id" class="form-control"  style="background-color: rgb(230, 230, 230)">
-                                <option value="">Pilih Data Pasien</option>
-                                    @foreach ($datatriase as $item)
-                                        <option value="{{ $item->id }}">{{ $item->pasien->nama }}</option>
-                                    @endforeach
-                            </select>
-                        </div>
-                <div class="row">
-                    <div class="col-md-4 offset-md-4">
-                        <form action="{{ url('datatriase/')}} " method="post">
-                            @method('patch')
-                            @csrf
                             <div class="form-group">
                                 <label>Pasien</label>
-                                <select name="datapasien_id" class="form-control">
-                                    <option value="">Pilih</option>
+                                <select name="datapasien_id" class="form-control" style="background-color: rgb(230, 230, 230)">
+                                    <option value="">Pilih Data Pasien</option>
                                     @foreach ($datapasien as $item)
                                         <option value="{{ $item->id }}">{{ $item->nama }}</option>
                                     @endforeach
                                 </select>
-                            </div>
-                            <div class="form-group">
-                                <label>Cara Datang</label>
-                                <input type="text" name="caradatang" class="form-control" value="{{ $datatriase }}" required>
-                            </div>
-                            <div class="form-group">
-                                <label>jeniskasus</label>
-                                <input type="text" name="jeniskasus" class="form-control" value="{{ $datatriase }}" required>
-                            </div>
-                            <div class="form-group">
-                                <label>kategori</label>
-                                <input type="text" name="kategori" class="form-control" value="{{ $datatriase }}" required>
-                            </div>
-                            <div class="form-group">
-                                <label>kesadaran</label>
-                                <input type="text" name="kesadaran" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label>Respon Time</label>
-                                <input type="text" name="respontime" class="form-control">
                             </div>
                             <div class="form-group">
                                 <div class="input-group mb-3">
@@ -170,6 +137,8 @@
                                         </label>
                                     </div>
                                 </div>
+                                <label>Jenis Pelayanan</label>
+                                <input type="text" name="jenispelayanan" class="form-control">
                             </div>
                             <br><hr><br>
                             <div class="form-group">
@@ -298,7 +267,6 @@
 
                             <button type="submit" class="btn btn-success">Simpan Data</button>
                         </form>
-
 
             </div>
         </div>

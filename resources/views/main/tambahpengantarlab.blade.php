@@ -27,10 +27,6 @@
 
     <div class="animated fadeIn">
         <div class="card">
-<<<<<<< HEAD
-
-=======
->>>>>>> b9d90574f07ac3a3fef37b83f5a06eb26b556d87
             <div class="card-header">
                 <strong>
                     Tambah Data Pengantar Lab
