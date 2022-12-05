@@ -64,14 +64,6 @@
                                         </div>
                                     </div>
                     </div>
-                        <div class="form-group">
-                            <select name="datapasien_id" class="form-control"  style="background-color: rgb(230, 230, 230)">
-                                <option value="">Pilih Data Pasien</option>
-                                    @foreach ($datatriase as $item)
-                                        <option value="{{ $item->id }}">{{ $item->pasien->nama }}</option>
-                                    @endforeach
-                            </select>
-                        </div>
                 <div class="row">
                     <div class="col-md-4 offset-md-4">
                         <form action="{{ url('datatriase')}} " method="post">
