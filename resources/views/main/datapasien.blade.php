@@ -24,53 +24,53 @@
 
 @section('content')
 <div class="content mt-3">
-
     <div class="animated fadeIn">
 
         @if (session('status'))
-            <div class="alert alert-success">
-                {{ session('status')}}
-            </div>
+        <div class="alert alert-success">
+            {{ session('status')}}
+        </div>
         @endif
 
-        <div class="card">
-            <div class="pull-left">
-                <div class=" offset-md-4">
-                    <strong>
-                        <h2>
-                            Data Pasien
-                        </h2>
-                    </strong>
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <div class=" offset-md-4">
+                        <strong>
+                            <h2>
+                                Data Pasien
+                            </h2>
+                        </strong>
+                    </div>
+                    <div class="pull-right">
+                        <a href="{{ url('datapasien/tambahpasien')}} " class="btn btn-success btn-sm">
+                            <i class="fa fa-plus-circle"></i> Tambah Data
+                        </a>
+                    </div>
                 </div>
-                <div class="pull-right">
-                    <a href="{{ url('datapasien/tambahpasien')}} " class="btn btn-success btn-sm">
-                        <i class="fa fa-plus-circle"></i> Tambah Data
-                    </a>
-                </div>
-            </div>
-            <div class="card-body table-responsive">
-                <table class="table table-bordered">
-                    <thead>
-                        <tr>
-                            <th>No.</th>
-                            <th>No Pasien</th>
-                            <th>Nama</th>
-                            <th>NIK</th>
-                            <th>Tempat Lahir</th>
-                            <th>Tanggal Lahir</th>
-                            <th>Umur</th>
-                            <th>Kategori</th>
-                            <th>Jenis Kelamin</th>
-                            <th>Alamat</th>
-                            <th>No Telp</th>
-                            <th>Golongan Darah</th>
-                            <th>Pekerjaan</th>
-                            <th>Jenis Bayar</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach ($datapasien as $item)
+                <div class="card-body table-responsive">
+                    <table id="bootstrap-data-table" class="table table-striped table-bordered">
+                        <thead>
+                            <tr>
+                                <th>No.</th>
+                                <th>No Pasien</th>
+                                <th>Nama</th>
+                                <th>NIK</th>
+                                <th>Tempat Lahir</th>
+                                <th>Tanggal Lahir</th>
+                                <th>Umur</th>
+                                <th>Kategori</th>
+                                <th>Jenis Kelamin</th>
+                                <th>Alamat</th>
+                                <th>No Telp</th>
+                                <th>Golongan Darah</th>
+                                <th>Pekerjaan</th>
+                                <th>Jenis Bayar</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach ($datapasien as $item)
                             <tr>
                                 <td>{{ $loop->iteration }} </td>
                                 <td>{{ $item->nopasien }} </td>
@@ -87,21 +87,30 @@
                                 <td>{{ $item->pekerjaan }} </td>
                                 <td>{{ $item->jenisbayar }} </td>
                                 <td class="text-center">
+<<<<<<< HEAD
+                                    <a href="{{ url('datapasien/' .$item->id)}}" class="btn btn-warning btn-sm"> <i
+                                            class="fa fa-eye"></i></a>
+                                    <a href="{{ url('datapasien/editpasien/' .$item->id)}}"
+                                        class="btn btn-primary btn-sm"> <i class="fa fa-pencil"></i></a>
+                                    <form action="{{ url('datapasien/' .$item->id)}}" method="POST" class="d-inline"
+                                        onsubmit="return confirm('Yakin hapus data?')">
+=======
                                      <a href="{{ url('datapasien/editpasien/' .$item->id)}}" class="btn btn-primary btn-sm"> <i class="fa fa-eye" ></i></a>
                                      <a href="{{ url('datapasien/editpasien/' .$item->id)}}" class="btn btn-primary btn-sm"> <i class="fa fa-pencil" ></i></a>
                                      <form action="{{ url('datapasien/' .$item->id)}}" method="POST" class="d-inline" onsubmit="return confirm('Yakin hapus data?')">
+>>>>>>> dc6ebde8cf20a8b057a85190138ab90ed4953756
                                         @method('delete')
                                         @csrf
                                         <button class="btn btn-danger btn-sm"> <i class="fa fa-trash"></i></button>
-                                     </form>
+                                    </form>
                                 </td>
                             </tr>
-                        @endforeach
-                    </tbody>
-                </table>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
-
 </div>
 @endsection

@@ -7,7 +7,7 @@
     <div class="col-sm-4">
         <div class="page-header float-left">
             <div class="page-title">
-                <h1>Hi Admin</h1>
+                <h1>Dashboard</h1>
             </div>
         </div>
     </div>
@@ -24,8 +24,8 @@
 
 @section('content')
 <div class="content mt-3">
-   <div class="animated fadeIn">
-    
+    <div class="animated fadeIn">
+
         <div class="pasien">
             <div class="card-body">
                 <h5 class="card-title">Pasien</h5>
@@ -54,29 +54,41 @@
             </div>
         </div>
     </div>
-
+    <!-- <div class="col-xl-3 col-lg-6">
+        <div class="card">
+            <div class="card-body">
+                <div class="stat-widget-one">
+                    <div class="stat-icon dib"><i class="ti-user text-primary border-primary"></i></div>
+                    <div class="stat-content dib">
+                        <div class="stat-text">New Customer</div>
+                        <div class="stat-digit">6</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
     <!-- Pop-up P-Rawat Inap -->
     <!-- <div id="popup-r" class="overlay">
         <div class="popup">
             <h2>Pendaftaran Rawat Inap</h2>
             <a class="close" href="#">&times;</a> -->
 
-            <!-- Contoh 1 menggunakan form dan button -->
-            <!-- <form method="post" action="#">
+    <!-- Contoh 1 menggunakan form dan button -->
+    <!-- <form method="post" action="#">
                 <button type="submit" class="btn mr-2">Umum</button>
             </form> -->
-            <!-- end contoh 1 -->
-            <!-- Contoh 1 menggunakan form dan button -->
-            <!-- <form method="post" action="https://kodekreasi.com">
+    <!-- end contoh 1 -->
+    <!-- Contoh 1 menggunakan form dan button -->
+    <!-- <form method="post" action="https://kodekreasi.com">
                 <button type="submit" class="btn mr-3">BPJS</button>
             </form> -->
-            <!-- end contoh 1 -->
-            <!-- Contoh 1 menggunakan form dan button -->
-            <!-- <form method="post" action="https://kodekreasi.com">
+    <!-- end contoh 1 -->
+    <!-- Contoh 1 menggunakan form dan button -->
+    <!-- <form method="post" action="https://kodekreasi.com">
                 <button type="submit" class="btn mr-4">Non BPJS</button>
             </form> -->
-            <!-- end contoh 1 -->
-        <!-- </div>
+    <!-- end contoh 1 -->
+    <!-- </div>
     </div> -->
     <!-- Pop-up P-Rawat Inap End-->
 

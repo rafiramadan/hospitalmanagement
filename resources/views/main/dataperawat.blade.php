@@ -45,7 +45,7 @@
                         </div>
                     </div>
                     <div class="card-body table-responsive">
-                        <table class="table table-bordered">
+                        <table id="bootstrap-data-table" class="table table-striped table-bordered">
                             <thead>
                                 <tr>
                                     <th>No.</th>

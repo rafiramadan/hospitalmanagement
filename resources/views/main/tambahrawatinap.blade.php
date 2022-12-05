@@ -27,6 +27,12 @@
 
     <div class="animated fadeIn">
         <div class="card">
+<<<<<<< HEAD
+            <div class="card-header">
+                <strong>
+                    Tambah Data Rawat Inap
+                </strong>
+=======
             <div class="pull-left">
                 <div class=" offset-md-4">
                     <br>
@@ -36,6 +42,7 @@
                         </h2>
                     </strong>
                 </div>
+>>>>>>> dc6ebde8cf20a8b057a85190138ab90ed4953756
                 <div class="pull-right">
                     <a href="{{ url('rawatinap')}} " class="btn btn-success btn-sm">
                         <i class="fa fa-undo"></i> Kembali
@@ -84,7 +91,7 @@
                             </div>
                             <div class="form-group">
                                 <label>Tanggal Masuk</label>
-                                <input type="text" name="tglmasuk" class="form-control">
+                                <input type="text" name="tglmasuk" class="form-control" placeholder="dd/mm/yy">
                             </div>
                             <button type="submit" class="btn btn-success">Simpan Data</button>
                         </form>

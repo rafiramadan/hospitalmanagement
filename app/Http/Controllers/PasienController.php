@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+// use App\Models\Pasien;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB; //penggunaan Query Builder
 
@@ -77,4 +78,17 @@ class PasienController extends Controller
         return redirect('datapasien')->with('status', 'Data pasien berhasil dihapus');
     }
 
+    //    /**
+    //  * Display the specified resource.
+    //  *
+    //  * @param  \App\Models\Pasien  $datapasien
+    //  * @return \Illuminate\Http\Response
+    //  */
+    // public function show($id)
+    // {
+    //     $datapasien = Pasien::all($id);
+    //     // dd($datatriase[0]->pasien);
+    //     // return $datatriase;
+    //     return view('main.detailpasien', $datapasien );
+    // }
 }
