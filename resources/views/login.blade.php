@@ -12,7 +12,8 @@
 <body>
     <div class="container"><br>
         <div class="col-md-4 col-md-offset-4">
-            <h2 class="text-center"><b>SIGADA</b><br>Sistem Informasi Gawat Darurat</h3>
+            <h2 class="text-center"><b>SIGADA</b></h2>
+            <h3 style="text-align: center;">Sistem Informasi Instalasi Gawat Darurat</h3>
             <hr>
             @if(session('error'))
             <div class="alert alert-danger">

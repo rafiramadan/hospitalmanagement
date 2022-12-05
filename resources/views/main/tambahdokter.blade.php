@@ -28,15 +28,10 @@
 
     <div class="animated fadeIn">
         <div class="card">
-            <div class="pull-left">
-                <div class=" offset-md-4">
-                    <br>
+            <div class="card-header">
                     <strong>
-                        <h2>
                             Tambah Data Dokter
-                        </h2>
                     </strong>
-                </div>
             <div class="card-header">
                 <strong>
                     Tambah Data Dokter

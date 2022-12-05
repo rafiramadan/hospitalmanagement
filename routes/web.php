@@ -81,9 +81,8 @@ Route::resource('datatriase', TriaseController::class);
 Route::resource('pengantarlab', PengantarlabController::class);
 Route::resource('rawatinap', RawatinapController::class);
 Route::resource('rujuk', RujukController::class);
-<<<<<<< HEAD
+
 Route::resource('obatpasien', ObatpasienController::class);
-=======
+
 Route::resource('obatpasien', ObatpasienController::class);
 Route::get('rujuk/editrujuk/{id}', [RujukController::class, 'editrujuk']);
->>>>>>> dc6ebde8cf20a8b057a85190138ab90ed4953756

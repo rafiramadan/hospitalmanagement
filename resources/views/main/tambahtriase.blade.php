@@ -28,22 +28,12 @@
 
     <div class="animated fadeIn">
         <div class="card">
-<<<<<<< HEAD
+
             <div class="card-header">
                 <strong>
                     Tambah Data Triase
                 </strong>
-=======
-            <div class="pull-left">
-                <div class=" offset-md-4">
-                    <br>
-                        <strong>
-                            <h2>
-                                Tambah Data Triase
-                            </h2>
-                        </strong>
-                </div>
->>>>>>> dc6ebde8cf20a8b057a85190138ab90ed4953756
+
                 <div class="pull-right">
                     <a href="{{ url('datatriase')}} " class="btn btn-success btn-sm">
                         <i class="fa fa-undo"></i> Kembali

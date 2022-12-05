@@ -48,7 +48,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Triase</h5>
                         <a href="{{('datatriase')}}" class="link-triase">Data Triase</a>
-                        <img src={{ asset('style/images/igd.png') }} class="igd-1">
+                        <img src="{{ asset('style/images/igd.png') }}" class="igd-1">
                     </div>
                 </div>
             </div>

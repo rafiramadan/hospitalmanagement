@@ -28,19 +28,11 @@
 
     <div class="animated fadeIn">
         <div class="card">
-            <div class="pull-left">
-                <div class=" offset-md-4">
-                    <br>
-                    <strong>
-                        <h2>
-                            Tambah Data Perawat
-                        </h2>
-                    </strong>
-                </div>
             <div class="card-header">
-                <strong>
-                    Tambah Data Perawat
-                </strong>
+                    <strong>
+                            Tambah Data Perawat
+                    </strong>
+
                 <div class="pull-right">
                     <a href="{{ url('dataobat')}} " class="btn btn-success btn-sm">
                         <i class="fa fa-undo"></i> Kembali

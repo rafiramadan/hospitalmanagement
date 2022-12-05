@@ -30,9 +30,7 @@
         <div class="card">
             <div class="card-header">
                     <strong>
-    
                             Tambah Data Pasien
-                   
                     </strong>
                 <div class="pull-right">
                     <a href="{{ url('datapasien')}} " class="btn btn-success btn-sm">
