@@ -52,13 +52,48 @@
                             </div>
                             <div class="form-group">
                                 <div class="input-group mb-3">
-                                    <input type="text" name="poliigd" class="form-control" placeholder="Poli IGD">
-                                    <input type="text" name="ruang" class="form-control" placeholder="Ruang">
+                                    <label class="input-group-text" width+>Penempatan Ruang</label>
+                                    <select name="poliigd" class="form-select" required style="background-color: rgb(230, 230, 230)">
+                                        <option value="">Pilih Poli</option>
+                                        <option value="Jantung">Jantung</option>
+                                        <option value="Kandungan">Kandungan</option>
+                                        <option value="Paru">Paru</option>
+                                        <option value="Penyakit Dalam">Penyakit Dalam</option>
+                                        <option value="Anak">Anak</option>
+                                        <option value="Saraf">Saraf</option>
+                                    </select>
+                                    <select class="form-select" name="ruang" style="background-color: rgb(230, 230, 230)">
+                                        <option style="color:grey" disabled="disabled" selected="selected">Pilih Ruang</option>
+                                        <option value="R. Resusitasi" > R. Resusitasi </option>
+                                        <option value="Non Resusitasi">Non Resusitasi </option>
+                                        <option value="Rawat Jalan"> Rawat Jalan </option>
+                                    </select>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label>Kelas</label>
-                                <input type="text" name="kelas" class="form-control">
+                                <label>Kategori Pasien</label>
+                                <div class="form-group">
+                                    <div class="d-grid gap-3">
+                                        <div class="p-2 bg-danger border border-danger">
+                                            <label class="radio-inline">
+                                                <input type="radio" name="kelas" value="Pasien Triase Merah">Kategori Pasien Triase Merah
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="d-grid gap-3">
+                                        <div class="p-2 bg-warning border border-warning">
+                                            <label class="radio-inline">
+                                                <input type="radio" name="kelas" value="Pasien Triase Kuning">Kategori Pasien Triase Kuning
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="d-grid gap-3">
+                                        <div class="p-2 bg-success border border-success">
+                                            <label class="radio-inline">
+                                                <input type="radio" name="kelas" value="Pasien Triase Hijau">Kategori Pasien Triase Hijau
+                                            </label>
+                                        </div>
+                                    </div>
                             </div>
                             <div class="form-group">
                                 <label>Diagnosa</label>

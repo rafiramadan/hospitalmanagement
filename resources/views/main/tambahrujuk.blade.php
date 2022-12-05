@@ -56,7 +56,16 @@
                             <div class="form-group">
                                 <div class="input-group mb-3">
                                     <input type="text" name="rstujuan" class="form-control" placeholder="Rumah Sakit Tujuan">
-                                    <input type="text" name="polirujukan" class="form-control" placeholder="Poli Rujukan">
+                                    <label class="input-group-text" width+>Penempatan Poli</label>
+                                    <select name="polirujukan" class="form-select" required style="background-color: rgb(230, 230, 230)">
+                                        <option value="">Pilih Poli Rujukan</option>
+                                        <option value="Jantung">Jantung</option>
+                                        <option value="Kandungan">Kandungan</option>
+                                        <option value="Paru">Paru</option>
+                                        <option value="Penyakit Dalam">Penyakit Dalam</option>
+                                        <option value="Anak">Anak</option>
+                                        <option value="Saraf">Saraf</option>
+                                    </select>
                                 </div>
                             </div>
                             <button type="submit" class="btn btn-success">Simpan Data</button>
