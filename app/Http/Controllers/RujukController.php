@@ -95,6 +95,7 @@ class RujukController extends Controller
      */
     public function destroy(Rujuk $rujuk)
     {
-        //
+        $rujuk->delete();
+        return redirect('rujuk')->with('status', 'Data Rujuk RS lain berhasil dihapus!');
     }
 }

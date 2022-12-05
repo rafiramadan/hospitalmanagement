@@ -77,18 +77,4 @@ class PasienController extends Controller
         DB::table('datapasien')->where('id', $id)->delete();
         return redirect('datapasien')->with('status', 'Data pasien berhasil dihapus');
     }
-
-    //    /**
-    //  * Display the specified resource.
-    //  *
-    //  * @param  \App\Models\Pasien  $datapasien
-    //  * @return \Illuminate\Http\Response
-    //  */
-    // public function show($id)
-    // {
-    //     $datapasien = Pasien::all($id);
-    //     // dd($datatriase[0]->pasien);
-    //     // return $datatriase;
-    //     return view('main.detailpasien', $datapasien );
-    // }
 }

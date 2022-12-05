@@ -110,6 +110,7 @@ class PengantarlabController extends Controller
      */
     public function destroy(Pengantarlab $pengantarlab)
     {
-        //
+        $pengantarlab->delete();
+        return redirect('pengantarlab')->with('status', 'Data Pengantar Lab berhasil dihapus!');
     }
 }

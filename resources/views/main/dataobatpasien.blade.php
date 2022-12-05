@@ -66,9 +66,9 @@
                                     <td>{{ $item->diagnosa }} </td>
                                     <td>{{ $item->jumlah }} </td>
                                     <td class="text-center">
-                                        <a href="{{ url('dataobat/editobat/' .$item->id)}}"
+                                        <a href="{{ url('obatpasien/editobat/' .$item->id)}}"
                                             class="btn btn-primary btn-sm"> <i class="fa fa-pencil"></i></a>
-                                        <form action="{{ url('dataobat/' .$item->id)}}" method="POST" class="d-inline"
+                                        <form action="{{ url('obatpasien/' .$item->id)}}" method="POST" class="d-inline"
                                             onsubmit="return confirm('Yakin hapus data?')">
                                             @method('delete')
                                             @csrf

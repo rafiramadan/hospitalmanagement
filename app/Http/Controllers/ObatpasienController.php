@@ -93,6 +93,7 @@ class ObatpasienController extends Controller
      */
     public function destroy(Obatpasien $obatpasien)
     {
-        //
+        $obatpasien->delete();
+        return redirect('obatpasien')->with('status', 'Data Obat pasien berhasil dihapus!');
     }
 }
