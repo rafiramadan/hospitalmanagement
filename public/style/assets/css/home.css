@@ -160,7 +160,7 @@ h5 {
       font-size: 1em;   
       background: #3c8dbc;  
       color: white; 
-      border: rgb(0, 0, 0) 0.1rem solid; 
+      border:none; 
       border-radius: 0.5rem;
       padding: 0.8rem 1.5rem; 
       margin-top: 1rem; 

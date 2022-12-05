@@ -92,7 +92,7 @@
                                     <td>{{ $item->dokter->nama }} </td>
                                     <td>{{ $item->catatan }} </td>
                                     <td class="text-center">
-                                        <a href="{{ url('pengantarlab/' .$item->id)}}" class="btn btn-primary btn-sm">
+                                        <a href="{{ url('pengantarlab/' .$item->id)}}" class="btn btn-warning btn-sm">
                                             <i class="fa fa-eye"></i></a>
                                         <a href="{{ url('pengantarlab/edit/' .$item->id)}}"
                                             class="btn btn-primary btn-sm">

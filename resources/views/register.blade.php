@@ -7,6 +7,7 @@
     <title>Register User</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <link rel="stylesheet" href="{{ asset('style/assets/css/login.css') }}">
 </head>
 <body>
     <div class="container"><br>

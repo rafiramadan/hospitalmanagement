@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Login - Sigada </title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="{{ asset('style/assets/css/login.css') }}"> -->
+    <link rel="stylesheet" href="{{ asset('style/assets/css/login.css') }}">
 </head>
 
 <body>
