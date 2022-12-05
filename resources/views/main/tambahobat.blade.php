@@ -39,6 +39,7 @@
             </div>
             <div class="card-body table-responsive" width="100%">
 
+<<<<<<< HEAD
                 <form action="{{ url('dataobat')}} " method="post">
                     @csrf
                     <div class="form-group">
@@ -55,6 +56,22 @@
                 </form>
 
 
+=======
+                        <form action="{{ url('dataobat')}} " method="post">
+                            @csrf
+                            <div class="form-group">
+                                <label>Kode Obat</label>
+                                <input type="text" name="kode" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group mb-3">
+                                    <input type="text" name="nama" class="form-control" required placeholder="Nama Obat">
+                                    <input type="text" name="stok" class="form-control" required placeholder="Stok Obat">
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-success">Simpan Data</button>
+                        </form>
+>>>>>>> b9d90574f07ac3a3fef37b83f5a06eb26b556d87
             </div>
         </div>
         @endsection

@@ -27,11 +27,18 @@
 
     <div class="animated fadeIn">
         <div class="card">
+<<<<<<< HEAD
 
             <div class="card-header">
                 <strong>
                     Tambah Data Rawat Inap
                 </strong>
+=======
+            <div class="card-header">
+                <strong>
+                    Tambah Data Rawat Inap
+                </strong>           
+>>>>>>> b9d90574f07ac3a3fef37b83f5a06eb26b556d87
                 <div class="pull-right">
                     <a href="{{ url('rawatinap')}} " class="btn btn-success btn-sm">
                         <i class="fa fa-undo"></i> Kembali
