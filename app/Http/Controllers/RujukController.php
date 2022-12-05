@@ -58,7 +58,10 @@ class RujukController extends Controller
      */
     public function show(Rujuk $rujuk)
     {
-        //
+        $rujuk = Rujuk::all();
+        // dd($datatriase[0]->pasien);
+        // return $datatriase;
+        return view('main.detailrujuk', compact('rujuk'));
     }
 
     /**

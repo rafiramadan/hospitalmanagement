@@ -73,7 +73,10 @@ class PengantarlabController extends Controller
      */
     public function show(Pengantarlab $pengantarlab)
     {
-        //
+        $pengantarlab = Pengantarlab::all();
+        // dd($datatriase[0]->pasien);
+        // return $datatriase;
+        return view('main.detailpengantarlab', compact('pengantarlab'));
     }
 
     /**

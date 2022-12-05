@@ -74,9 +74,11 @@
                                     <td>{{ $item->dokter->nama }} </td>
                                     <td>{{ $item->tglmasuk }} </td>
                                     <td class="text-center">
-                                        <a href="{{ url('dataobat/editobat/' .$item->id)}}"
+                                        <a href="{{ url('rawatinap/' .$item->id)}}" class="btn btn-warning btn-sm"> <i
+                                            class="fa fa-eye"></i></a>
+                                        <a href="{{ url('rawatinap/editobat/' .$item->id)}}"
                                             class="btn btn-primary btn-sm"> <i class="fa fa-pencil"></i></a>
-                                        <form action="{{ url('dataobat/' .$item->id)}}" method="POST" class="d-inline"
+                                        <form action="{{ url('rawatinap/' .$item->id)}}" method="POST" class="d-inline"
                                             onsubmit="return confirm('Yakin hapus data?')">
                                             @method('delete')
                                             @csrf

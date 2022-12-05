@@ -39,7 +39,7 @@
         <div class="card">
             <div class="card-header">
                 <strong>
-                    Detail Triase
+                    Detail Data Triase
                 </strong>
                 <div class="pull-right">
                     <a href="{{ url('datatriase')}} " class="btn btn-success btn-sm">

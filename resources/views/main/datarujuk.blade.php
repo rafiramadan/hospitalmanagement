@@ -7,7 +7,7 @@
     <div class="col-sm-4">
         <div class="page-header float-left">
             <div class="page-title">
-                <h1>Data Rawat Rujuk RS lain</h1>
+                <h1>Data Rujuk RS lain</h1>
             </div>
         </div>
     </div>
@@ -35,7 +35,7 @@
                 <div class="card">
                     <div class="card-header">
                         <strong>
-                            Data Rawat Rujuk RS lain
+                            Data Rujuk RS lain
                         </strong>
                         <div class="pull-right">
                             <a href="{{ url('rujuk/create')}} " class="btn btn-success btn-sm">
@@ -64,9 +64,11 @@
                                     <td>{{ $item->rstujuan }} </td>
                                     <td>{{ $item->polirujukan }} </td>
                                     <td class="text-center">
-                                        <a href="{{ url('dataobat/editobat/' .$item->id)}}"
+                                        <a href="{{ url('rujuk/' .$item->id)}}" class="btn btn-warning btn-sm"> <i
+                                            class="fa fa-eye"></i></a>
+                                        <a href="{{ url('rujuk/editobat/' .$item->id)}}"
                                             class="btn btn-primary btn-sm"> <i class="fa fa-pencil"></i></a>
-                                        <form action="{{ url('dataobat/' .$item->id)}}" method="POST" class="d-inline"
+                                        <form action="{{ url('rujuk/' .$item->id)}}" method="POST" class="d-inline"
                                             onsubmit="return confirm('Yakin hapus data?')">
                                             @method('delete')
                                             @csrf

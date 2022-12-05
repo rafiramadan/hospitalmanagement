@@ -54,7 +54,7 @@ class RawatinapController extends Controller
         $rawatinap->tglmasuk = $request->tglmasuk;
         $rawatinap->save();
 
-        return redirect('rawatinap')->with('status', 'Data Pengantar Lab berhasil ditambahkan!');
+        return redirect('rawatinap')->with('status', 'Data Rawat Inap berhasil ditambahkan!');
     }
 
     /**
@@ -65,7 +65,10 @@ class RawatinapController extends Controller
      */
     public function show(Rawatinap $rawatinap)
     {
-        //
+        $rawatinap = Rawatinap::all();
+        // dd($datatriase[0]->pasien);
+        // return $datatriase;
+        return view('main.detailrawatinap', compact('rawatinap'));
     }
 
     /**
@@ -99,6 +102,8 @@ class RawatinapController extends Controller
      */
     public function destroy(Rawatinap $rawatinap)
     {
-        //
+        $rawatinap->delete();
+        return redirect('rawatinap')->with('status', 'Data Rawat Inap berhasil dihapus!');
+        
     }
 }
