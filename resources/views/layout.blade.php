@@ -18,22 +18,22 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
 </head>
 <body>
-    
+
     <script src="{{ asset('style/assets/js/vendor/jquery-2.1.4.min.js') }}"></script>
     <script src="{{ asset('style/assets/js/popper.min.js') }}"></script>
     <script src="{{ asset('style/assets/js/plugins.js') }}"></script>
     <script src="{{ asset('style/assets/js/main.js') }}"></script>
- 
+
     <aside id="left-panel" class="left-panel">
         <nav class="navbar navbar-expand-sm navbar-default">
             <div class="navbar-header">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="">Manajemen IGD</a> <br> 
+                <a class="navbar-brand" href="">Manajemen IGD</a> <br>
                 <a class="navbar-brand hidden" href=""></a>
             </div>
- 
+
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li>
@@ -73,7 +73,7 @@
             </div><!-- /.navbar-collapse -->
         </nav>
     </aside><!-- /#left-panel -->
- 
+
     <div id="right-panel" class="right-panel">
         <header id="header" class="header">
             <div class="header-menu">
@@ -89,7 +89,7 @@
                         </div>
                     </div>
                 </div>
- 
+
                 <div class="col-sm-5">
                     <div class="user-area dropdown float-right">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -101,14 +101,14 @@
                     </div>
                 </div>
             </div>
- 
+
         </header><!-- /header -->
-        
+
         @yield('breadcrumbs')
 
         @yield('content')
- 
-    </div>    
- 
+
+    </div>
+
 </body>
 </html>

@@ -134,8 +134,6 @@
                                         </label>
                                     </div>
                                 </div>
-                                <label>Jenis Pelayanan</label>
-                                <input type="text" name="jenispelayanan" class="form-control">
                             </div>
                             <br><hr><br>
                             <div class="form-group">
